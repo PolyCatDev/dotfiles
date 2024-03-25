@@ -1,4 +1,5 @@
 require("core.lazy")
+require("core.keybinds")
 
 -- Enables Numbers
 vim.cmd("set number")
