@@ -1,4 +1,4 @@
-# neovim-config
+# What is this?
 
 PolyCat's NeoVim config files. This config is going to change. Keep that in mind.
 
