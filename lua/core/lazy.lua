@@ -14,11 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 -- Plugin inporter
-require("lazy").setup({
-    {import = "plugins.gruvbox"},
-    {import = "plugins.telescope"},
-    {import = "plugins.treesitter"},
-    {import = "plugins.nvim-tree"}
-})
+require("lazy").setup("plugins")
 
 
