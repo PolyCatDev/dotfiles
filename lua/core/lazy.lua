@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {import = "plugins.gruvbox"},
   {import = "plugins.telescope"},
+  {import = "plugins.treesitter"}
 })
 
 
