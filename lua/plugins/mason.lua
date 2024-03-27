@@ -10,7 +10,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {"lua_ls", "basedpyright"}
+                ensure_installed = {"lua_ls", "basedpyright", "quick_lint_js"}
             })
         end
     },
