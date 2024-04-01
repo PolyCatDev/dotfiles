@@ -13,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "basedpyright", "quick_lint_js" },
+				ensure_installed = { "lua_ls", "quick_lint_js" },
 			})
 		end,
 	},
@@ -25,11 +25,11 @@ return {
 			local lspconfig = require("lspconfig")
 
 			-- Comment out these line if ur not using lsp auto-complete (lua/plugins/completion.lua)
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			-- "capabilities" should be removed if not using LSP auto-complete
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
 		end,
 	},
 }
