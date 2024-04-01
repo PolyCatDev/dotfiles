@@ -11,9 +11,9 @@ return {
 		"rafamadriz/friendly-snippets",
 	},
 
---    {
---        "hrsh7th/cmp-nvim-lsp",
---    },
+    { -- LSP Snippets Engine
+        "hrsh7th/cmp-nvim-lsp",
+    },
 
 	{ -- Display Engine
 		"hrsh7th/nvim-cmp",
@@ -38,14 +38,27 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				sources = cmp.config.sources({
-					-- { name = "nvim_lsp" },
+					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
 					{ name = "buffer" },
 				}),
 			})
+
+            -- Add autocommand for loading snippets
+            vim.cmd([[
+                augroup LoadSnippetsOnFiletype
+                    autocmd!
+                    autocmd BufEnter * lua LoadSnippets()
+                augroup END
+            ]])
+
+            function LoadSnippets()
+                if vim.bo.filetype == 'lua' then
+                    require('luasnip.loaders.from_vscode').lazy_load()
+                end
+                -- Add similar conditionals for other filetypes as needed
+            end
 		end,
 	},
 }
-
-

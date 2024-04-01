@@ -8,3 +8,5 @@ return {
         vim.api.nvim_set_keymap("n", "<C-l>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
     end,
 }
+
+
