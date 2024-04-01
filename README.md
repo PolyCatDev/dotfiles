@@ -1,6 +1,16 @@
 # What is this?
 
-PolyCat's NeoVim config files. This config is going to change. Keep that in mind.
+PolyCat's NeoVim config files.
+
+### Features
+1. [Telescope](https://github.com/nvim-telescope/telescope.nvim) for search
+2. Snippets for most languages
+3. Code completion for languages (lua, py, js, by default)
+4. Formatters thru [none-ls](https://github.com/nvimtools/none-ls.nvim) and [Mason](https://github.com/williamboman/mason.nvim)
+5. [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) as file browser
+6. Cool status bar with [laline](https://github.com/nvim-lualine/lualine.nvim)
+7. [Gruvbox theme](https://github.com/ellisonleao/gruvbox.nvim)
+8. [Lazy](https://github.com/folke/lazy.nvim) package manager
 
 # ATENTION
 1. `ripgrep` package is required for live grep in Telescope Search to work
@@ -13,3 +23,6 @@ git clone https://codeberg.org/PolyCat/neovim-config.git && \
 mv neovim-config nvim && \
 cd ~
 ```
+
+# To Do
+- [ ] Keyboard shortcuts list
