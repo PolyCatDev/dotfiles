@@ -10,7 +10,7 @@ PolyCat's NeoVim config files.
 5. [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) as file browser
 6. Cool status bar with [lualine](https://github.com/nvim-lualine/lualine.nvim)
 7. [Gruvbox theme](https://github.com/ellisonleao/gruvbox.nvim)
-8. [Lazy](https://github.com/folke/lazy.nvim) package manager
+8. Git inegration with [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 
 # ATENTION
 1. `ripgrep` package is required for live grep in Telescope Search to work
