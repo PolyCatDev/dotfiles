@@ -5,7 +5,7 @@ PolyCat's NeoVim config files.
 ### Features
 1. [Telescope](https://github.com/nvim-telescope/telescope.nvim) for search
 2. Snippets for most languages
-3. Code completion for languages (lua, bash, py, and js by default)
+3. Code completion for languages (lua, bash, docker, py, and js by default)
 4. Formatters thru [none-ls](https://github.com/nvimtools/none-ls.nvim) and [Mason](https://github.com/williamboman/mason.nvim)
 5. [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) as file browser
 6. Cool status bar with [lualine](https://github.com/nvim-lualine/lualine.nvim)
