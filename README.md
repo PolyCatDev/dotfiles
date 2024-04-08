@@ -11,6 +11,7 @@ PolyCat's NeoVim config files.
 6. Cool status bar with [lualine](https://github.com/nvim-lualine/lualine.nvim)
 7. [Gruvbox theme](https://github.com/ellisonleao/gruvbox.nvim)
 8. Git inegration with [gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [vim-fugitive](https://github.com/tpope/vim-fugitive)
+9. Remote connectio support thru [remote-nvim](https://github.com/amitds1997/remote-nvim.nvim)
 
 # ATENTION
 1. `ripgrep` package is required for live grep in Telescope Search to work
