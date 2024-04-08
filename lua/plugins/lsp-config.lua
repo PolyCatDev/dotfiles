@@ -13,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "bashls", "basedpyright", "html", "cssls", "quick_lint_js" },
+				ensure_installed = { "lua_ls", "bashls", "dockerls", "docker_compose_language_service", "basedpyright", "html", "cssls", "quick_lint_js" },
 			})
 		end,
 	},
@@ -33,6 +33,10 @@ return {
 
 			-- Bash
 			lspconfig.bashls.setup({ capabilities = capabilities })
+
+            -- Docker
+            lspconfig.dockerls.setup({ capabilities = capabilities })
+            lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
 
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
