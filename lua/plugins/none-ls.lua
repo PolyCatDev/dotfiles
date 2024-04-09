@@ -5,10 +5,10 @@ return {
 
 		null_ls.setup({
 			sources = {
-				-- Lua Formatter
+				-- Lua 
 				null_ls.builtins.formatting.stylua,
 
-				-- Python Formatters
+				-- Python 
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
 
