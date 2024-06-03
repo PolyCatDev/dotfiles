@@ -37,13 +37,6 @@ return {
 			-- Lua
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 
-			-- Bash
-			lspconfig.bashls.setup({ capabilities = capabilities })
-
-			-- Docker
-			lspconfig.dockerls.setup({ capabilities = capabilities })
-			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
-
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
 
@@ -51,9 +44,6 @@ return {
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
-
-            -- Rust
-            lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 		end,
 	},
 }
