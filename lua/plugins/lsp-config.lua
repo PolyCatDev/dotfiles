@@ -15,14 +15,10 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"bashls",
-					"dockerls",
-					"docker_compose_language_service",
 					"basedpyright",
 					"html",
 					"cssls",
 					"quick_lint_js",
-                    "rust_analyzer"
 				},
 			})
 		end,
