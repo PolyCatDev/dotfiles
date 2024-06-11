@@ -11,7 +11,7 @@ Using [Telescope](https://github.com/nvim-telescope/telescope.nvim) for search
 Using [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ### Snippets and Code Completion
-lua, bash, docker, py, c,js, rust, html and css by default
+lua, bash, docker, py, c, js, rust, html and css by default
 
 ### Code Formatters
 Formatters thru [none-ls](https://github.com/nvimtools/none-ls.nvim) and [Mason](https://github.com/williamboman/mason.nvim)
