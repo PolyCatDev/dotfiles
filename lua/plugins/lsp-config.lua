@@ -16,6 +16,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"basedpyright",
+                    "clangd",
 					"html",
 					"cssls",
 					"quick_lint_js",
@@ -40,10 +41,14 @@ return {
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
 
+            -- C
+            lspconfig.basedpyright.setup({ capabilities = capabilities })
+
 			-- html, css and js
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
+
 		end,
 	},
 }
