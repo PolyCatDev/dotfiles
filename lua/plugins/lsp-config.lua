@@ -42,7 +42,7 @@ return {
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
 
             -- C
-            lspconfig.basedpyright.setup({ capabilities = capabilities })
+            lspconfig.clangd.setup({ capabilities = capabilities })
 
 			-- html, css and js
 			lspconfig.html.setup({ capabilities = capabilities })
