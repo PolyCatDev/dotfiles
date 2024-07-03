@@ -20,21 +20,20 @@ return {
 					"html",
 					"cssls",
 					"quick_lint_js",
+                    "volar",
 				},
 			})
 		end,
 	},
 
-	{ -- LSP Connector (LSP -> nVim)
+	{ -- LSP configurator (LSP -> nVim)
 		"neovim/nvim-lspconfig",
 
 		config = function()
+            -- Comment out these line if ur not using lsp auto-complete (lua/plugins/lsp-config.lua)
 			local lspconfig = require("lspconfig")
-
-			-- Comment out these line if ur not using lsp auto-complete (lua/plugins/completion.lua)
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			-- "capabilities" should be removed if not using LSP auto-complete
 			-- Lua
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 
@@ -48,6 +47,7 @@ return {
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
+            lspconfig.volar.setup({ capabilities = capabilities })
 
 		end,
 	},
