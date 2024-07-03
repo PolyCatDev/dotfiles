@@ -20,7 +20,7 @@ return {
 					"html",
 					"cssls",
 					"quick_lint_js",
-                    "volar",
+                    "vuels",
 				},
 			})
 		end,
@@ -47,7 +47,7 @@ return {
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
-            lspconfig.volar.setup({ capabilities = capabilities })
+            lspconfig.vuels.setup({})
 
 		end,
 	},
