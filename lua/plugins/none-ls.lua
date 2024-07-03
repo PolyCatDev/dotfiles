@@ -17,6 +17,9 @@ return {
 			},
 		})
 
+        vim.g.prettier_config = {tabWidth = 4}
+
+
 		vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, {})
 	end,
 }
