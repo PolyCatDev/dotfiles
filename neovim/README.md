@@ -22,7 +22,7 @@ Oh hi there. You found my NeoVim config
 
 ```bash
 cd ~ && \
-git clone https://codeberg.org/PolyCat/neovim-config.git && \
+git clone https://github.com/PolyCatDev/polycat-config-files.git && \
 cd polycat-config-files/neovim && \
 mkdir -p ~/.config/nvim && \
 mv * ~/.config/nvim && \
