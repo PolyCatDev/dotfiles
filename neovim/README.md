@@ -24,7 +24,7 @@ Oh hi there. You found my NeoVim config
 git clone https://github.com/PolyCatDev/polycat-config-files.git && \
 cd polycat-config-files/neovim && \
 mkdir -p ~/.config/nvim && \
-cp *.json ~/.config/nvim && \
+cp * ~/.config/nvim && \
 cd ../../ && \
 rm -rf polycat-config-files
 ```
