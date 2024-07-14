@@ -21,12 +21,11 @@ Oh hi there. You found my NeoVim config
 ## Installation
 
 ```bash
-cd ~ && \
 git clone https://github.com/PolyCatDev/polycat-config-files.git && \
 cd polycat-config-files/neovim && \
 mkdir -p ~/.config/nvim && \
-mv * ~/.config/nvim && \
-cd ~ && \
+cp *.json ~/.config/nvim && \
+cd ../../ && \
 rm -rf polycat-config-files
 ```
 
