@@ -3,8 +3,6 @@
     "workbench.productIconTheme": "material-product-icons",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "explorer.confirmDragAndDrop": false,
-    "typescript.validate.enable": true,
-    "javascript.validate.enable": false,
     "editor.minimap.enabled": false,
     "redhat.telemetry.enabled": false,
     "window.customTitleBarVisibility": "auto",
