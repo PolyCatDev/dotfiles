@@ -50,9 +50,18 @@
         "vscodevim.vim": 1,
         "asvetliakov.vscode-neovim": 1
     },
+
+    // Godot
     "[gdscript]": {
         "editor.defaultFormatter": "geequlim.godot-tools"
     },
+
+    // Prettier
     "prettier.tabWidth": 4,
-    
+
+    // Astro formatter
+    "prettier.documentSelectors": ["**/*.astro"],
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    }
 }
