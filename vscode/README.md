@@ -17,7 +17,7 @@ git clone https://github.com/PolyCatDev/config-files.git && \
 cd config-files/vscode/ && \
 cp *.json ~/.config/VSCodium/User/ && \
 cd ../../ && \
-rm -rf polycat-config-files
+rm -rf config-files
 ```
 
 ### VSCode
@@ -29,5 +29,5 @@ git clone https://github.com/PolyCatDev/config-files.git && \
 cd config-files/vscode/ && \
 cp *.json ~/.config/Code/User/ && \
 cd ../../ && \
-rm -rf polycat-config-files
+rm -rf config-files
 ```
