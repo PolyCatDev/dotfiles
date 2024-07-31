@@ -7,7 +7,6 @@ Oh hi, welcome to my VS Code config files.
 ### ATTENTION
 This will remove your old configs. Backup it before running any of these scripts.
 
-### VSCode
 
 ### VSCodium
 
@@ -20,6 +19,8 @@ cp *.json ~/.config/VSCodium/User/ && \
 cd ../../ && \
 rm -rf polycat-config-files
 ```
+
+### VSCode
 
 ```bash
 rm -f ~/.config/Code/User/keybindings.json && \
