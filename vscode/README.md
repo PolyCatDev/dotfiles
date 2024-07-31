@@ -5,7 +5,7 @@ Oh hi, welcome to my VS Code config files.
 ## Instalation
 
 ### ATTENTION
-This will remove your old configs. Backup it before running any of these scripts.
+This will remove your old configs. Back them up before running any of these scripts.
 
 
 ### VSCodium
