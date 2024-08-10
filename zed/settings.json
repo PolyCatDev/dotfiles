@@ -30,5 +30,10 @@
   "scrollbar": {
     "show": "never"
   },
-  "format_on_save": "off"
+  "format_on_save": "off",
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  }
 }
