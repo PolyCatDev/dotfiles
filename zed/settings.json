@@ -21,7 +21,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Andromeda"
+    "dark": "Gruvbox Dark Hard"
   },
   "buffer_font_family": "Hack Nerd Font",
   "buffer_font_weight": 520,
