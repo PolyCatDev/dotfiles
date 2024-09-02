@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=CHIRP
+GenericName=Radio Programming Tool
+Comment=Program amateur radios
+Icon=/nix/store/va549sfflhr3yy1nc1lyy629g30im1kx-chirp-0.4.0-unstable-2024-08-06/lib/python3.11/site-packages/chirp/share/chirp.ico
+Exec=chirp
+Terminal=false
+MimeType=x-scheme-handler/chirp
+Categories=Utility;HamRadio
+Keywords=Hamradio;Programming;Handheld;Radio;Amateur;Programmer
+StartupNotify=true

@@ -1,0 +1,67 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.productIconTheme": "material-product-icons",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "window.customTitleBarVisibility": "auto",
+    "workbench.sideBar.location": "left",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+    "editor.fontLigatures": false,
+    "editor.fontFamily": " 'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontWeight": "bold",
+    "python.experiments.optOutFrom": ["All"],
+    "python.languageServer": "Jedi",
+    "css.lint.emptyRules": "ignore",
+
+    // Theme
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // Vim Config
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+
+    "vim.leader": "<space>",
+
+    //
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        //Format
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        // Toggle side pannel
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        }
+    ],
+
+    // To improve performance,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
+
+    // Godot
+    "[gdscript]": {
+        "editor.defaultFormatter": "geequlim.godot-tools"
+    },
+
+    // Prettier
+    "prettier.tabWidth": 4,
+
+    // Astro formatter
+    "prettier.documentSelectors": ["**/*.astro"],
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    }
+}
