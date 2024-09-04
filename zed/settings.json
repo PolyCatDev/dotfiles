@@ -30,19 +30,10 @@
   "scrollbar": {
     "show": "never"
   },
-  "format_on_save": "on",
+  "format_on_save": "off",
   "git": {
     "inline_blame": {
       "enabled": false
-    }
-  },
-  "languages": {
-    "Astro": {
-      "formatter": {
-        "external": {
-          "command": "prettier {buffer_path}"
-        }
-      }
     }
   }
 }
