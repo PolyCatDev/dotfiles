@@ -21,7 +21,7 @@ Oh hi there. You found my NeoVim config
 ## Installation
 
 ```bash
-git clone https://github.com/PolyCatDev/config-files.git && \
+git clone https://github.com/PolyCatDev/dotfiles.git && \
 cd config-files/neovim && \
 mkdir -p ~/.config/nvim && \
 cp * ~/.config/nvim && \
