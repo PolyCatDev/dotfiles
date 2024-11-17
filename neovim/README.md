@@ -24,7 +24,7 @@ Oh hi there. You found my NeoVim config
 git clone https://github.com/PolyCatDev/dotfiles.git && \
 cd dotfiles/neovim && \
 mkdir -p ~/.config/nvim && \
-cp * ~/.config/nvim && \
+cp -r * ~/.config/nvim && \
 cd ../../ && \
 rm -rf config-files
 ```
