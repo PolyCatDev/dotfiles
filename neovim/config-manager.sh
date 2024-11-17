@@ -26,13 +26,13 @@ cp -r $(ls | grep -v $REPO) $REPO/$DIR_NAME
 
 if [[ -n "$1" ]]; then
     
-    if [[ "$1" == "-c" || "$1" == "-commit" ]] && [[ -n "$2" ]]; then
+    if [[ "$1" == "-c" || "$1" == "--commit" ]] && [[ -n "$2" ]]; then
 
         cd $REPO
         git add .
         git commit -m "$2"
     
-        if [[ $3 == "-p" ]]; then
+        if [[ $3 == "-p" || $3 == "--push" ]]; then
             git push
         fi
 
