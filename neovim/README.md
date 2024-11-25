@@ -26,7 +26,7 @@ cd dotfiles/neovim && \
 mkdir -p ~/.config/nvim && \
 cp -r * ~/.config/nvim && \
 cd ../../ && \
-rm -rf config-files
+rm -rf bash-factory
 ```
 
 ## To Do
