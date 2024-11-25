@@ -19,6 +19,7 @@ return {
 					"html",
 					"cssls",
 					"quick_lint_js",
+                    "astro",
 				},
 			})
 		end,
@@ -37,6 +38,9 @@ return {
 
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
+
+            -- Astro
+			lspconfig.astro.setup({ capabilities = capabilities })
 
 			-- html, css and js
 			lspconfig.html.setup({ capabilities = capabilities })
