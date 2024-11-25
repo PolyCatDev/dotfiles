@@ -14,11 +14,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
 					"basedpyright",
-					"html",
-					"cssls",
-					"quick_lint_js",
 				},
 			})
 		end,
@@ -32,21 +28,8 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			-- Lua
-			lspconfig.lua_ls.setup({ capabilities = capabilities })
-
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
-
-			-- html, css and js
-			lspconfig.html.setup({ capabilities = capabilities })
-			lspconfig.cssls.setup({ capabilities = capabilities })
-			lspconfig.quick_lint_js.setup({ capabilities = capabilities })
-
-            -- Godot
-			lspconfig.gdscript.setup({ capabilities = capabilities })
-			lspconfig.gdshader_lsp.setup({ capabilities = capabilities })
-
 		end,
 	},
 }
