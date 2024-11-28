@@ -17,9 +17,7 @@ return {
 					"lua_ls",
 					"basedpyright",
 					"html",
-					"cssls",
-					"quick_lint_js",
-                    "astro",
+                    "biome",
 				},
 			})
 		end,
