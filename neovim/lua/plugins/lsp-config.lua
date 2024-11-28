@@ -38,7 +38,7 @@ return {
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
 
             -- Astro
-			lspconfig.astro.setup({ capabilities = capabilities })
+			lspconfig.biome.setup({ capabilities = capabilities })
 
 			-- html, css and js
 			lspconfig.html.setup({ capabilities = capabilities })
