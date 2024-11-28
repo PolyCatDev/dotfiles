@@ -1,1 +1,0 @@
-/var/home/polycat/.config/nvim/default/lua/core/config.lua
