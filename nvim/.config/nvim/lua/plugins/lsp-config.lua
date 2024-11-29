@@ -18,6 +18,7 @@ return {
 					"basedpyright",
 					"html",
                     "biome",
+                    "astro",
 				},
 			})
 		end,
@@ -37,8 +38,9 @@ return {
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
 
-            -- Astro
+            -- Web
 			lspconfig.biome.setup({ capabilities = capabilities })
+			lspconfig.astro.setup({ capabilities = capabilities })
 
 			-- html, css and js
 			lspconfig.html.setup({ capabilities = capabilities })
