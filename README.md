@@ -10,3 +10,6 @@ This is the place wehere I store my various config files.
 - Godot Engine settings
 - TF2 binds
 - An archive of my NixOS config
+
+> [!TIP]
+> All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
