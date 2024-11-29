@@ -1,0 +1,5 @@
+[user]
+	email = contact.polycat@proton.me
+	name = PolyCat
+[credential]
+	helper = cache --timeout=3600
