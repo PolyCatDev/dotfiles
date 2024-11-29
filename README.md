@@ -6,6 +6,7 @@ This is the place wehere I store my various config files.
 
 - Bash config
 - Git config
+- Tmux config
 - NeoVim config
 - VSCode config
 - Zed editor config
