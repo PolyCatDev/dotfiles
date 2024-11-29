@@ -18,17 +18,6 @@ Oh hi there. You found my NeoVim config
 2. `binutils` package is required for Treesitter languages to load
 3. `npm` package most probably required for some LSPs to work
 
-## Installation
-
-```bash
-git clone https://github.com/PolyCatDev/dotfiles.git && \
-cd dotfiles/neovim && \
-mkdir -p ~/.config/nvim && \
-cp -r * ~/.config/nvim && \
-cd ../../ && \
-rm -rf dotfiles
-```
-
 ## To Do
 
 - [ ] Keyboard shortcuts list
