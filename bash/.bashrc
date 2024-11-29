@@ -24,11 +24,12 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# Edits
 eval "$(starship init bash)"
 
-EDITOR=nvim
+export PATH=~/.local/bin:$PATH
+export GOPATH=~/.local/share/go
+
+export EDITOR="nvim"
 
 alias ls=lsd
-export GOPATH=~/.local/share/go
-export PATH=~/.local/bin:$PATH
-export EDITOR="nvim"
