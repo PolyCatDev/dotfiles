@@ -4,6 +4,8 @@ This is the place wehere I store my various config files.
 
 # What will I find here?
 
+- Bash config
+- Git config
 - NeoVim config
 - VSCode config
 - Zed editor config
