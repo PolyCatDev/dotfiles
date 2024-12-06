@@ -33,3 +33,5 @@ export GOPATH=~/.local/share/go
 export EDITOR="nvim"
 
 alias ls=lsd
+
+set -o vi
