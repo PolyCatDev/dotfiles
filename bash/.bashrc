@@ -34,4 +34,4 @@ export EDITOR="nvim"
 
 alias ls=lsd
 
-set -o vi
+alias render-folder-gif='ffmpeg -framerate 24 -i frames/%04d.png -vf "scale=1280:720" final.gif'
