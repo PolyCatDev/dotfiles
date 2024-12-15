@@ -6,6 +6,9 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 
+-- Disable soft wrap
+vim.o.wrap = false
+
 -- Rebind Leader
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = " "
