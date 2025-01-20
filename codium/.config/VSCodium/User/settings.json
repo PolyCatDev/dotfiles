@@ -1,6 +1,7 @@
 {
     "workbench.startupEditor": "none",
     "workbench.productIconTheme": "material-product-icons",
+    "workbench.editor.showTabs": "single",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "explorer.confirmDragAndDrop": false,
     "editor.minimap.enabled": false,
@@ -63,5 +64,9 @@
     "prettier.documentSelectors": ["**/*.astro"],
     "[astro]": {
         "editor.defaultFormatter": "astro-build.astro-vscode"
-    }
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "database-client.autoSync": true
 }
