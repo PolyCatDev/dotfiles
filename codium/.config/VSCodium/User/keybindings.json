@@ -34,7 +34,7 @@
     { "key": "ctrl+`", "command": "workbench.action.terminal.focus" },
     {
         "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
+        "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminalFocus"
     },
     {
