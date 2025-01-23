@@ -20,4 +20,7 @@ This is the place wehere I store my various config files.
 > [!TIP]
 > All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
 > 
-> ![Stow Tutorial](https://www.youtube-nocookie.com/embed/y6XCebnB9gs?si=2UVCRMmQnnmQtLZk)
+> [Watch tutorial on YouTube](https://youtu.be/y6XCebnB9gs)
+> 
+><a href="https://youtu.be/y6XCebnB9gs"><img src="https://img.youtube.com/vi/y6XCebnB9gs/maxresdefault.jpg" width="600" alt="Stow Tutorial Image Thumbnail"/></a>
+
