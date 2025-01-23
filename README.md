@@ -5,6 +5,7 @@ This is the place wehere I store my various config files.
 # What will I find here?
 
 - Bash config
+- Ghostty config
 - Git config
 - Tmux config
 - NeoVim config
