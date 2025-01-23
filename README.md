@@ -19,3 +19,5 @@ This is the place wehere I store my various config files.
 
 > [!TIP]
 > All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
+> 
+> ![Stow Tutorial](https://www.youtube-nocookie.com/embed/y6XCebnB9gs?si=2UVCRMmQnnmQtLZk)
