@@ -6,10 +6,12 @@ This is the place wehere I store my various config files.
 
 - Bash config
 - Ghostty config
+- Foot term config
+- Direwolf base config
 - Git config
 - Tmux config
 - NeoVim config
-- VSCode config
+- VSCodium config
 - Zed editor config
 - Godot Engine settings
 - TF2 binds
