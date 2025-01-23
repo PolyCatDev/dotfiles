@@ -71,5 +71,8 @@
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
-    "database-client.autoSync": true
+    "database-client.autoSync": true,
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    }
 }
