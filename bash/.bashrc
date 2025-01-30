@@ -29,8 +29,8 @@ set -o vi
 
 eval "$(starship init bash)"
 
-export PATH=~/.local/bin:$PATH
-export GOPATH=~/.local/share/go
+export PATH=~/.local/bin:~/.local/go/bin:$PATH
+export GOPATH=~/.local/go
 
 export EDITOR="nvim"
 
