@@ -16,6 +16,7 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "basedpyright",
+                    "gopls",
                     "html",
                     "biome",
                     "astro",
@@ -38,6 +39,10 @@ return {
 
             -- Py
             lspconfig.basedpyright.setup({ capabilities = capabilities })
+
+            -- GO
+
+            lspconfig.gopls.setup({ capabilities = capabilities })
 
             -- Web
             lspconfig.html.setup({ capabilities = capabilities })

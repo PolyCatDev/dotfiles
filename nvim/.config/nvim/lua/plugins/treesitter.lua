@@ -7,7 +7,7 @@ return {
 
             configs.setup({
                 auto_install = true,
-                ensure_installed = { "lua", "gdscript", "gdshader", "astro", "typescript", "gitcommit" },
+                ensure_installed = { "lua", "gdscript", "gdshader", "astro", "typescript", "gitcommit", "go" },
 
                 highlight = { enable = true },
                 indent = { enable = true },
