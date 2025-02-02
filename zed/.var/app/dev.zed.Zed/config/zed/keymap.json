@@ -29,5 +29,11 @@
     "bindings": {
       "space t": "workspace::ToggleZoom"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-`": "workspace::ToggleBottomDock"
+    }
   }
 ]
