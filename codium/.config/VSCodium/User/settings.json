@@ -21,10 +21,6 @@
     "python.languageServer": "Jedi",
     "css.lint.emptyRules": "ignore",
 
-    // Theme
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.iconTheme": "material-icon-theme",
-
     // Vim Config
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -74,5 +70,10 @@
     "database-client.autoSync": true,
     "[go]": {
         "editor.defaultFormatter": "golang.go"
-    }
+    },
+    "gruvboxMaterial.darkContrast": "hard",
+    "gruvboxMaterial.darkPalette": "mix",
+    "gruvboxMaterial.darkWorkbench": "flat",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.iconTheme": "material-icon-theme"
 }
