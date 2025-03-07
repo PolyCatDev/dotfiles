@@ -34,6 +34,5 @@ export GOPATH=~/.local/go
 
 export EDITOR="nvim"
 
-alias ls=lsd
-
-alias render-folder-gif='ffmpeg -framerate 24 -i frames/%04d.png -vf "scale=1280:720" final.gif'
+alias ls="lsd"
+alias upd="brew update && brew upgrade; flatpak update; rpm-ostree upgrade"
