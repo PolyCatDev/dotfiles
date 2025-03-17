@@ -25,8 +25,6 @@ fi
 unset rc
 
 # Edits
-set -o vi
-
 eval "$(starship init bash)"
 
 export PATH=~/.local/bin:~/.local/go/bin:$PATH
