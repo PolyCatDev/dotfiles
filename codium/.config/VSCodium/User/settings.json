@@ -9,7 +9,6 @@
     "explorer.confirmDragAndDrop": false,
     "editor.minimap.enabled": false,
     "redhat.telemetry.enabled": false,
-    "window.customTitleBarVisibility": "auto",
     "workbench.sideBar.location": "left",
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
@@ -75,5 +74,15 @@
     "gruvboxMaterial.darkPalette": "mix",
     "gruvboxMaterial.darkWorkbench": "flat",
     "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "blender.executables": [
+        {
+            "path": "/var/home/polycat/.local/bin/blender",
+            "name": "",
+            "isDebug": false,
+            "linuxInode": 16670726
+        }
+    ],
+    "go.toolsManagement.autoUpdate": true,
+    "window.titleBarStyle": "native"
 }
