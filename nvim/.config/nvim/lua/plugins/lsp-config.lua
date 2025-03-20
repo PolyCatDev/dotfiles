@@ -30,6 +30,10 @@ return {
         "neovim/nvim-lspconfig",
 
         config = function()
+            vim.keymap.set('n', '<Leader>[', vim.diagnostic.open_float, {})
+
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+
             -- Comment out these line if ur not using lsp auto-complete (lua/plugins/lsp-config.lua)
             local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -55,4 +59,5 @@ return {
             lspconfig.gdshader_lsp.setup({ capabilities = capabilities })
         end,
     },
+
 }
