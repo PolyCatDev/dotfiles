@@ -26,6 +26,7 @@ unset rc
 
 # Edits
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
 
 export PATH=~/.local/bin:~/.local/go/bin:$PATH
 export GOPATH=~/.local/go
