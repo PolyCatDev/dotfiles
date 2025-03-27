@@ -73,7 +73,6 @@
     "gruvboxMaterial.darkContrast": "hard",
     "gruvboxMaterial.darkPalette": "mix",
     "gruvboxMaterial.darkWorkbench": "flat",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.iconTheme": "material-icon-theme",
     "blender.executables": [
         {
@@ -84,5 +83,6 @@
         }
     ],
     "go.toolsManagement.autoUpdate": true,
-    "window.titleBarStyle": "native"
+    "window.titleBarStyle": "native",
+    "workbench.colorTheme": "Gruvbox Dark Hard"
 }
