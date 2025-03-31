@@ -26,7 +26,6 @@ unset rc
 
 # Edits
 eval "$(starship init bash)"
-eval "$(zoxide init --cmd cd bash)"
 
 export PATH=~/.local/bin:~/.local/go/bin:$PATH
 export GOPATH=~/.local/go
@@ -35,3 +34,6 @@ export EDITOR="nvim"
 
 alias ls="lsd"
 alias upd="brew update && brew upgrade; flatpak update -y; rpm-ostree upgrade"
+
+
+eval "$(zoxide init --cmd cd bash)"
