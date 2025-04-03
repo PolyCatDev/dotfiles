@@ -1,0 +1,74 @@
+[gd_resource type="EditorSettings" load_steps=5 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bjm71"]
+device = -1
+physical_keycode = 71
+unicode = 103
+
+[sub_resource type="InputEventKey" id="InputEventKey_srhi0"]
+device = -1
+physical_keycode = 82
+unicode = 114
+
+[sub_resource type="InputEventKey" id="InputEventKey_23e0j"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_1owxi"]
+keycode = 4194326
+
+[resource]
+interface/editor/editor_screen = -2
+interface/editor/main_font = "/var/home/polycat/.local/share/fonts/Inter/InterVariable.ttf"
+interface/theme/preset = "Custom"
+interface/theme/base_color = Color(0.122252, 0.122252, 0.122252, 1)
+interface/theme/accent_color = Color(8.66354e-07, 0.480029, 0.562864, 1)
+interface/theme/contrast = 0.2
+interface/theme/icon_saturation = 2.0
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/3d/navigation/emulate_numpad = false
+network/connection/network_mode = 1
+editors/3d/navigation/orbit_modifier = 0
+editors/3d/navigation/pan_modifier = 1
+editors/3d/navigation/zoom_modifier = 4
+export/android/java_sdk_path = "/usr/lib/sdk/openjdk17/jvm/openjdk-17"
+export/android/android_sdk_path = ""
+export/android/debug_keystore = "/var/home/polycat/.var/app/org.godotengine.Godot/data/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/rcedit = ""
+export/windows/osslsigncode = ""
+export/windows/wine = ""
+_default_feature_profile = ""
+_use_favorites_root_selection = false
+network/debug_adapter/request_timeout = 1000
+editors/grid_map/editor_side = 1
+_editor_settings_advanced_mode = false
+_project_settings_advanced_mode = false
+_export_template_download_directory = ""
+_script_setup_templates_dictionary = {}
+_script_setup_use_script_templates = false
+shortcuts = [{
+"name": "spatial_editor/instant_translate",
+"shortcuts": [SubResource("InputEventKey_bjm71")]
+}, {
+"name": "spatial_editor/instant_rotate",
+"shortcuts": [SubResource("InputEventKey_srhi0")]
+}, {
+"name": "spatial_editor/instant_scale",
+"shortcuts": [SubResource("InputEventKey_23e0j")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": [SubResource("InputEventKey_1owxi")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}]
+metadata/script_setup_templates_dictionary = {
+"CharacterBody3D": "0CharacterBody3DBasic Movement"
+}
+metadata/script_setup_use_script_templates = true
