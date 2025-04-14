@@ -33,7 +33,7 @@ export GOPATH=~/.local/go
 export EDITOR="nvim"
 
 alias ls="lsd"
-alias upd="brew update && brew upgrade; flatpak update -y; rpm-ostree upgrade"
+alias upd="brew update && brew upgrade; flatpak update -y; rpm-ostree cancel && rpm-ostree upgrade"
 
 
 eval "$(zoxide init --cmd cd bash)"
