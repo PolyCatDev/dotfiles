@@ -14,6 +14,7 @@ This is the place wehere I store my various config files.
 - VSCodium config
 - Zed editor config
 - Godot Engine settings
+- wlxoverlay config
 - TF2 binds
 - An archive of my NixOS config
 
