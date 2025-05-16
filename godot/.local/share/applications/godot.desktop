@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=env DRI_PRIME=1 godot
+Icon=godot
+Name=Godot
+Terminal=false
+Type=Application
