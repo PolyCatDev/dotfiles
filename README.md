@@ -16,6 +16,7 @@ This is the place wehere I store my various config files.
 - Godot Engine settings
 - wlxoverlay config
 - TF2 binds
+- OpenTabletDriver presets
 - An archive of my NixOS config
 
 > [!TIP]
