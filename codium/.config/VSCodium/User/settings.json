@@ -16,9 +16,7 @@
     "editor.fontLigatures": false,
     "editor.fontFamily": " 'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.fontWeight": "bold",
-    "python.experiments.optOutFrom": [
-        "All"
-    ],
+    "python.experiments.optOutFrom": ["All"],
     "python.languageServer": "Jedi",
     "css.lint.emptyRules": "ignore",
     // Vim Config
@@ -32,22 +30,22 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         //Format
         {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument"
-            ]
+            "before": ["<leader>", "f"],
+            "commands": ["editor.action.formatDocument"]
         },
         // Toggle side pannel
         {
-            "before": [
-                "<leader>",
-                "t"
-            ],
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        // Periscope Toggle
+        {
+            "before": ["<leader>", "p"],
             "commands": [
-                "workbench.action.toggleSidebarVisibility"
+                {
+                    "command": "periscope.search",
+                    "when": "editorTextFocus"
+                }
             ]
         }
     ],
@@ -63,9 +61,7 @@
     // Prettier
     "prettier.tabWidth": 4,
     // Astro formatter
-    "prettier.documentSelectors": [
-        "**/*.astro"
-    ],
+    "prettier.documentSelectors": ["**/*.astro"],
     "[astro]": {
         "editor.defaultFormatter": "astro-build.astro-vscode"
     },
