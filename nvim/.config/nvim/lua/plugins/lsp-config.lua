@@ -21,8 +21,6 @@ return {
                 "astro",
                 "tailwindcss",
                 "clangd",
-                "gdscript",
-                "gdshader_lsp",
             },
             -- optional: disable auto-enable if you want to manually configure
             -- automatic_enable = false,
