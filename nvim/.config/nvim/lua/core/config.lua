@@ -13,6 +13,9 @@ vim.o.wrap = false
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = " "
 
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Setup tabs in .gd files
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "gdscript",
