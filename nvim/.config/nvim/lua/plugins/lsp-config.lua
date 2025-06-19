@@ -10,20 +10,23 @@ return {
     },
 
     { -- LSP Garbber
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "basedpyright",
-                    "gopls",
-                    "html",
-                    "biome",
-                    "astro",
-                    "tailwindcss",
-                },
-            })
-        end,
+        "mason-org/mason-lspconfig.nvim",
+        opts = {
+            ensure_installed = {
+                "lua_ls",
+                "basedpyright",
+                "gopls",
+                "html",
+                "biome",
+                "astro",
+                "tailwindcss",
+                "clangd",
+                "gdscript",
+                "gdshader_lsp",
+            },
+            -- optional: disable auto-enable if you want to manually configure
+            -- automatic_enable = false,
+        },
     },
 
     { -- LSP configurator (LSP -> nVim)
@@ -45,7 +48,6 @@ return {
             lspconfig.basedpyright.setup({ capabilities = capabilities })
 
             -- GO
-
             lspconfig.gopls.setup({ capabilities = capabilities })
 
             -- Web
@@ -53,6 +55,9 @@ return {
             lspconfig.biome.setup({ capabilities = capabilities })
             lspconfig.astro.setup({ capabilities = capabilities })
             lspconfig.tailwindcss.setup({ capabilities = capabilities })
+
+            -- C, C++
+            lspconfig.clangd.setup({ capabilities = capabilities })
 
             -- Godot
             lspconfig.gdscript.setup({ capabilities = capabilities })
