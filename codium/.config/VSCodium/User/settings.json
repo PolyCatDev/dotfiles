@@ -51,15 +51,14 @@
             "before": ["<leader>", "t"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
-        // Periscope Toggle
+        // Periscope and image searh toggle toggle
+        {
+            "before": ["<leader>", "o"],
+            "commands": ["periscope.search"]
+        },
         {
             "before": ["<leader>", "p"],
-            "commands": [
-                {
-                    "command": "periscope.search",
-                    "when": "editorTextFocus"
-                }
-            ]
+            "commands": ["workbench.action.quickOpen"]
         }
     ],
     // To improve performance,
