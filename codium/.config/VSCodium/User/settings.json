@@ -1,8 +1,6 @@
 {
     "workbench.startupEditor": "none",
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.editor.showTabs": "single",
-    "zenMode.showTabs": "single",
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.horizontal": "hidden",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -25,6 +23,14 @@
     "window.menuBarVisibility": "toggle",
     "zenMode.fullScreen": false,
     "zenMode.restore": true,
+
+    // Windows and Tabs
+    "workbench.editor.showTabs": "none",
+    "zenMode.showTabs": "none",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.value": 1,
+    "files.autoSave": "onFocusChange",
 
     // Vim Config
     "vim.easymotion": true,
