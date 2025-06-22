@@ -9,10 +9,6 @@ vim.cmd("set expandtab")
 -- Disable soft wrap
 vim.o.wrap = false
 
--- Rebind Leader
-vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', { noremap = true, silent = true })
-vim.g.mapleader = " "
-
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
@@ -25,3 +21,9 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.shiftwidth = 4
     end,
 })
+
+-- Keybinds
+vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>n", "<cmd>nohlsearch<CR>", { noremap = true, silent = true })
+
