@@ -19,6 +19,13 @@
     "python.experiments.optOutFrom": ["All"],
     "python.languageServer": "Jedi",
     "css.lint.emptyRules": "ignore",
+
+    // Zen Mode Config
+    "zenMode.hideStatusBar": false,
+    "window.menuBarVisibility": "toggle",
+    "zenMode.fullScreen": false,
+    "zenMode.restore": true,
+
     // Vim Config
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -89,5 +96,6 @@
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "C_Cpp.intelliSenseEngine": "disabled"
 }
