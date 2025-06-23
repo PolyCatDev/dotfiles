@@ -25,6 +25,7 @@ Oh hi there. You found my NeoVim config
 - `leader + t` = open file tree
 - `leader + f` = format current buffer
 - `leader + [` = open diagnostic box for error
+- `ctrl + space` = if pressed in insert mode open signature help
 - `shift + k` = incpect hovered keyword 
 - `leader + g` = preview git hunk
 - `leader + n` = clear highlighti
