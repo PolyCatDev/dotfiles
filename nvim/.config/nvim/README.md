@@ -1,8 +1,6 @@
-# Neovim config details
-
 Oh hi there. You found my NeoVim config
 
-## Features
+# Features
 
 - **Syntax Highlighting:** Using [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - **Auto Pairs:** Using [autopairs](https://github.com/windwp/nvim-autopairs)
@@ -14,12 +12,7 @@ Oh hi there. You found my NeoVim config
 - **Integrated Terminal:** Using [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 - **Centered Code Buffers:** Using [no-neck-pain](https://github.com/shortcuts/no-neck-pain.nvim)
 
-## ATENTION
-
-1. `ripgrep` package is required for live grep in Telescope Search to work
-2. `binutils` package is required for Treesitter languages to load
-3. `npm` package most probably required for some LSPs to work
-
-## To Do
-
-- [ ] Keyboard shortcuts list
+>[!Warning]
+>1. `ripgrep` package is required for live grep in Telescope Search to work
+>2. `binutils` package is required for Treesitter languages to load
+>3. `npm` package most probably required for some LSPs to work
