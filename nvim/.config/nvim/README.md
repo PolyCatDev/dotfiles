@@ -19,7 +19,7 @@ Oh hi there. You found my NeoVim config
 
 # Keybinds
 
-- `leader` = <Space>
+- `leader` = space key
 - `leader + p` = file search and select
 - `leader + o` = full text search
 - `leader + t` = open file tree
