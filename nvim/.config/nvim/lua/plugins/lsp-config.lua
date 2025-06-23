@@ -66,7 +66,10 @@ return {
     { -- Extra tools that Mason does't automatically install for reasons installer
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
-            ensure_installed = { "stylua" },
+            ensure_installed = {
+                "stylua",
+                "prettier",
+            },
         },
     },
 
@@ -99,7 +102,7 @@ return {
     -- LSP Engine--
     ---------------
 
-    { -- LSP Engine 
+    { -- LSP Engine
         "hrsh7th/nvim-cmp",
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
