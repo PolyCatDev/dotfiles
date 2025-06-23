@@ -16,3 +16,16 @@ Oh hi there. You found my NeoVim config
 >1. `ripgrep` package is required for live grep in Telescope Search to work
 >2. `binutils` package is required for Treesitter languages to load
 >3. `npm` package most probably required for some LSPs to work
+
+# Keybinds
+
+- `leader` = <Space>
+- `leader + p` = file search and select
+- `leader + o` = full text search
+- `leader + t` = open file tree
+- `leader + f` = format current buffer
+- `leader + [` = open diagnostic box for error
+- `shift + k` = incpect hovered keyword 
+- `leader + g` = preview git hunk
+- `leader + n` = clear highlighti
+
