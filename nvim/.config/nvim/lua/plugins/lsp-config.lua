@@ -71,6 +71,8 @@ return {
 			ensure_installed = {
 				"stylua",
 				"prettier",
+				"black",
+				"mesonlsp",
 			},
 		},
 	},
