@@ -1,12 +1,10 @@
-# What is this?
+# PolyCat's Team Fortess 2 Binds
 
-Oh cool. You found my TF2 binds
-
-## Installation
+### Installation
 
 These files go in `<local-tf2-folder>/tf/cfg/app/`
 
-## Misc
+### Misc
 
 My HUD: https://github.com/MissOddenstein/peachhud.git
 
