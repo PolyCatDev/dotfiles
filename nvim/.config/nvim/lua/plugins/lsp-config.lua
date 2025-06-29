@@ -19,6 +19,7 @@ return {
 				"astro",
 				"tailwindcss",
 				"clangd",
+				"nil_ls",
 			},
 		},
 	},
