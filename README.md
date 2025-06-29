@@ -21,6 +21,11 @@ This is the place wehere I store my various config files.
 
 > [!TIP]
 > All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
+>
+> Run this for qick setup of the ones I actually use
+>```bash
+>stow bash/ codium/ ghostty/ git/ godot/ nvim/ otd/ wlxoverlay/
+>```
 > 
 > [Watch tutorial on YouTube](https://youtu.be/y6XCebnB9gs)
 > 
