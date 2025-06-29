@@ -15,7 +15,7 @@ Oh hi there. You found my NeoVim config
 >[!Warning]
 >1. `ripgrep` package is required for live grep in Telescope Search to work
 >2. `binutils` package is required for Treesitter languages to load
->3. `npm` package most probably required for some LSPs to work
+>3. `npm`, `go`, `gcc` and `rust` package required for LSPs to compile
 
 # Keybinds
 
