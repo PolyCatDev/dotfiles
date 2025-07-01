@@ -20,6 +20,19 @@ return {
 				"tailwindcss",
 				"clangd",
 				"nil_ls",
+				"docker_compose_language_service",
+			},
+		},
+	},
+
+	{ -- Extra tools that Mason does't automatically install for reasons
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"prettier",
+				"black",
+				"mesonlsp",
 			},
 		},
 	},
@@ -59,23 +72,56 @@ return {
 			-- Godot
 			lspconfig.gdscript.setup({ capabilities = capabilities })
 			lspconfig.gdshader_lsp.setup({ capabilities = capabilities })
+
+			-- Compose
+			local util = require("lspconfig.util")
+			vim.filetype.add({
+				filename = {
+					["compose.yml"] = "yaml.docker-compose",
+					["compose.yaml"] = "yaml.docker-compose",
+					["docker-compose.yml"] = "yaml.docker-compose",
+					["docker-compose.yaml"] = "yaml.docker-compose",
+				},
+			})
+			lspconfig.docker_compose_language_service.setup({
+				capabilities = capabilities,
+				root_dir = util.root_pattern(
+					"docker-compose.yaml",
+					"docker-compose.yml",
+					"compose.yaml",
+					"compose.yml"
+				),
+			})
 		end,
 	},
 
-	---------------------------
-	-- External Tools Config --
-	---------------------------
+	--------------------------
+	-- LSP Engines and such --
+	--------------------------
 
-	{ -- Extra tools that Mason does't automatically install for reasons installer
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		opts = {
-			ensure_installed = {
-				"stylua",
-				"prettier",
-				"black",
-				"mesonlsp",
-			},
+	{ -- LSP Engine
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
 		},
+		config = function()
+			local cmp = require("cmp")
+			vim.opt.pumheight = 12
+			cmp.setup({
+				mapping = cmp.mapping.preset.insert({
+					["<Tab>"] = cmp.mapping.select_next_item(),
+					["<S-Tab>"] = cmp.mapping.select_prev_item(),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
+				}),
+				sources = {
+					{ name = "nvim_lsp" },
+					{ name = "buffer" },
+					{ name = "path" },
+				},
+			})
+		end,
 	},
 
 	{ -- Link external tools as LSPs
@@ -100,35 +146,6 @@ return {
 			vim.g.prettier_config = { tabWidth = 4 }
 
 			vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, {})
-		end,
-	},
-
-	---------------
-	-- LSP Engine--
-	---------------
-
-	{ -- LSP Engine
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-		},
-		config = function()
-			local cmp = require("cmp")
-			vim.opt.pumheight = 12
-			cmp.setup({
-				mapping = cmp.mapping.preset.insert({
-					["<Tab>"] = cmp.mapping.select_next_item(),
-					["<S-Tab>"] = cmp.mapping.select_prev_item(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
-				}),
-				sources = {
-					{ name = "nvim_lsp" },
-					{ name = "buffer" },
-					{ name = "path" },
-				},
-			})
 		end,
 	},
 }
