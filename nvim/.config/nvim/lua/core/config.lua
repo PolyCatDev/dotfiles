@@ -12,7 +12,7 @@ vim.o.wrap = false
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Setup tabs specific file types
+-- Setup Godot Logic
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "gdscript",
     callback = function()
@@ -22,6 +22,13 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
+if gdproject then
+    io.close(gdproject)
+    vim.fn.serverstart './godothost'
+end
+
+-- Setup 2 space tabs for C and C++ files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "c", "cpp" },
   callback = function()
