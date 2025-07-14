@@ -25,15 +25,26 @@ fi
 unset rc
 
 # Edits
+export EDITOR="nvim"
+
 eval "$(starship init bash)"
 
 export PATH=~/.local/bin:~/.local/go/bin:$PATH
 export GOPATH=~/.local/go
 
-export EDITOR="nvim"
+
+upd() {
+  echo -e "\e[32mUpdating Homebrew Packages\e[0m"
+  brew update && brew upgrade
+  echo " "
+
+  echo -e "\e[32mUpdating Flatpak Packages\e[0m"
+  flatpak update -y
+  echo " "
+
+  echo -e "\e[32mUpdating RPM Packages\e[0m"
+  rpm-ostree cancel && rpm-ostree upgrade
+}
 
 alias ls="lsd"
-alias upd="brew update && brew upgrade; flatpak update -y; rpm-ostree cancel && rpm-ostree upgrade"
-
-
 eval "$(zoxide init --cmd cd bash)"
