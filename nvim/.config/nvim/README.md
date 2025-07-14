@@ -18,7 +18,7 @@ Oh hi there. You found my NeoVim config
 >3. `npm`, `go`, `gcc`, `python` and `rust` packages required for all LSPs to compile
 
 >[!TIP]
-> In Godot paste this in `Exec Flags` to use this config as external editor
+> In Godot Editor Settings paste this in `Exec Flags` to use this config as external editor
 >```bash
 >--server ./godothost --remote-send "<C-\><C-N>:n{file}<CR>{line}G{col}|"
 >```
