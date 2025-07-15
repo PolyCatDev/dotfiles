@@ -1,7 +1,4 @@
 return {
-	----------------
-	-- LSP Config --
-	----------------
 
 	{ -- LSP Package Manager
 		"mason-org/mason-lspconfig.nvim",
@@ -21,18 +18,6 @@ return {
 				"clangd",
 				"nil_ls",
 				"docker_compose_language_service",
-			},
-		},
-	},
-
-	{ -- Extra tools that Mason does't automatically install for reasons
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		opts = {
-			ensure_installed = {
-				"stylua",
-				"prettier",
-				"black",
-				"mesonlsp",
 			},
 		},
 	},
@@ -95,9 +80,46 @@ return {
 		end,
 	},
 
-	--------------------------
-	-- LSP Engines and such --
-	--------------------------
+	{ -- Extra tools that Mason does't automatically install for reasons
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"prettier",
+				"black",
+				"mesonlsp",
+                "gdtoolkit"
+			},
+		},
+	},
+
+	{ -- Link external tools as LSPs
+		"nvimtools/none-ls.nvim",
+		config = function()
+			local null_ls = require("null-ls")
+
+			null_ls.setup({
+				sources = {
+					-- Lua
+					null_ls.builtins.formatting.stylua,
+
+					-- Python
+					null_ls.builtins.formatting.black,
+					null_ls.builtins.formatting.isort,
+
+					-- Prettier
+					null_ls.builtins.formatting.prettier,
+
+					--GDToolkit
+					null_ls.builtins.formatting.gdformat,
+				},
+			})
+
+			vim.g.prettier_config = { tabWidth = 4 }
+
+			vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, {})
+		end,
+	},
 
 	{ -- LSP Engine
 		"hrsh7th/nvim-cmp",
@@ -121,31 +143,6 @@ return {
 					{ name = "path" },
 				},
 			})
-		end,
-	},
-
-	{ -- Link external tools as LSPs
-		"nvimtools/none-ls.nvim",
-		config = function()
-			local null_ls = require("null-ls")
-
-			null_ls.setup({
-				sources = {
-					-- Lua
-					null_ls.builtins.formatting.stylua,
-
-					-- Python
-					null_ls.builtins.formatting.black,
-					null_ls.builtins.formatting.isort,
-
-					-- Prettier
-					null_ls.builtins.formatting.prettier,
-				},
-			})
-
-			vim.g.prettier_config = { tabWidth = 4 }
-
-			vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, {})
 		end,
 	},
 }
