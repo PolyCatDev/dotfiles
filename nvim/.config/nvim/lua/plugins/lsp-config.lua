@@ -10,13 +10,13 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"basedpyright",
+				"ruby_lsp",
 				"gopls",
 				"html",
 				"biome",
 				"astro",
 				"tailwindcss",
 				"clangd",
-				"nil_ls",
 				"docker_compose_language_service",
 			},
 		},
@@ -41,6 +41,9 @@ return {
 
 			-- Py
 			lspconfig.basedpyright.setup({ capabilities = capabilities })
+
+			-- Ruby
+			lspconfig.ruby_lsp.setup({ capabilities = capabilities })
 
 			-- GO
 			lspconfig.gopls.setup({ capabilities = capabilities })

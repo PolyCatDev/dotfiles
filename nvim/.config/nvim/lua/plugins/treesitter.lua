@@ -21,6 +21,7 @@ return {
                     "yaml",
                     "markdown",
                     "python",
+                    "ruby",
                 },
 
                 highlight = { enable = true },
