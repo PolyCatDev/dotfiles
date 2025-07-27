@@ -8,7 +8,7 @@ Oh hi there. You found my NeoVim config
 - **Code Completion:** Lua, Py, Ruby, Go, Godot, C, C++ and web formats by default
 - **Code Formatters:** Using [none-ls](https://github.com/nvimtools/none-ls.nvim) and [Mason](https://github.com/williamboman/mason.nvim)
 - **File Tree:** [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) as file simple file tree
-- **Git Inegration:** [gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- **Git Inegration:** [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - **Integrated Terminal:** Using [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 - **Centered Code Buffers:** Using [no-neck-pain](https://github.com/shortcuts/no-neck-pain.nvim)
 
