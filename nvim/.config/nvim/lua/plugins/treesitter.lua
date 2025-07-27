@@ -16,6 +16,7 @@ return {
                     "typescript",
                     "css",
                     "gitcommit",
+                    "git_rebase",
                     "go",
                     "cpp",
                     "yaml",
