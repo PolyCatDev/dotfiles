@@ -8,7 +8,4 @@ return {
 		end,
 	},
 
-	{ -- Git commands in editor
-		"tpope/vim-fugitive",
-	},
 }
