@@ -15,7 +15,7 @@ Oh hi there. You found my NeoVim config
 >[!Warning]
 >1. `ripgrep` package is required for live grep in Telescope Search to work
 >2. `binutils` package is required for Treesitter languages to load
->3. `npm`, `go`, `gcc`, `python` and `ruby` packages required for all LSPs to properly install
+>3. `npm`, `go`, `gcc` and `python` packages required for all LSPs to properly install
 
 >[!TIP]
 > In Godot Editor Settings paste this in `Exec Flags` to use this config as external editor

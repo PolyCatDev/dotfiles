@@ -10,7 +10,6 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "basedpyright",
-                "ruby_lsp",
                 "gopls",
                 "html",
                 "biome",
@@ -46,7 +45,6 @@ return {
                 "astro",
                 "lua_ls",
                 "basedpyright",
-                "ruby_lsp",
                 "gopls",
                 "html",
                 "biome",
