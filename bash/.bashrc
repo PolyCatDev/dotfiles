@@ -46,15 +46,7 @@ upd() {
   rpm-ostree cancel && rpm-ostree upgrade
 }
 
-mkpio() {
-  read -p "Project Name: " pioProjectName
-  git clone https://github.com/PolyCatDev/clangd-platformio $pioProjectName
-  cd $pioProjectName
-
-  read -p "Board ID: " pioBoardID
-  ./setup.sh $pioBoardID
-  cd ..
-}
+alias mkpio='/bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/PolyCatDev/clangd-platformio/refs/heads/main/wizard.sh)"'
 
 alias ls="lsd"
 eval "$(zoxide init --cmd cd bash)"
