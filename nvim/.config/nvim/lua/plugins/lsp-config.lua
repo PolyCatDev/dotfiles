@@ -75,6 +75,7 @@ return {
                 "stylua",
                 "prettier",
                 "black",
+                "isort",
                 "mesonlsp",
                 "gdtoolkit",
             },
