@@ -36,5 +36,6 @@ return {
         vim.opt.conceallevel = 2
 
         vim.keymap.set("n", "<leader>b", "<cmd>ObsidianBacklinks<cr>", { desc = "Show backlinks" })
+        vim.keymap.set("n", "<leader>m", "<cmd>ObsidianTags<cr>", { desc = "Show tags" })
     end,
 }

@@ -36,4 +36,5 @@ Oh hi there. You found my NeoVim config
 - `leader + g` = preview git hunk
 - `leader + n` = clear highlighti
 - `leader + b` = show obsidian backlinks
+- `leader + m` = show obsidian tags
 
