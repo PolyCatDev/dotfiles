@@ -21,7 +21,7 @@ return {
 			min_chars = 1,
 		},
 		ui = {
-            checkboxes = {},
+			checkboxes = {},
 			bullets = {},
 			external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
 			reference_text = { hl_group = "ObsidianRefText" },
@@ -51,6 +51,14 @@ return {
 				opts = { noremap = false, expr = true, buffer = true },
 			},
 		},
+
+		note_id_func = function(title)
+			if title ~= nil then
+				return title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+			else
+				return "untitled"
+			end
+		end,
 	},
 
 	config = function(_, opts)
