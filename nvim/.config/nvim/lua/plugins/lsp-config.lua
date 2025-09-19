@@ -17,6 +17,7 @@ return {
                 "tailwindcss",
                 "clangd",
                 "docker_compose_language_service",
+                "gh_actions_ls",
             },
         },
     },
@@ -31,16 +32,6 @@ return {
             vim.keymap.set("i", "<C-Space>", vim.lsp.buf.signature_help, {})
             vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, {})
 
-            -- # LSPs
---            vim.lsp.config.docker_compose_language_service = {
---                root_dir = util.root_pattern(
---                    "docker-compose.yaml",
---                    "docker-compose.yml",
---                    "compose.yaml",
---                    "compose.yml"
---                ),
---            }
-
             vim.lsp.enable({
                 "astro",
                 "lua_ls",
@@ -53,6 +44,7 @@ return {
                 "gdscript",
                 "gdshader_lsp",
                 "docker_compose_language_service",
+                "gh_actions_ls",
             })
 
             -- Compose filetype detector
