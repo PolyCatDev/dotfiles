@@ -15,7 +15,7 @@ device = -1
 physical_keycode = 83
 unicode = 115
 
-[sub_resource type="InputEventKey" id="InputEventKey_pg2c3"]
+[sub_resource type="InputEventKey" id="InputEventKey_1owxi"]
 keycode = 4194326
 
 [sub_resource type="InputEventKey" id="InputEventKey_pn5bg"]
@@ -243,8 +243,8 @@ text_editor/script_list/highlight_scene_scripts = true
 text_editor/script_list/group_help_pages = true
 text_editor/script_list/sort_scripts_by = 0
 text_editor/script_list/list_script_names_as = 0
-text_editor/external/exec_path = "/usr/sbin/codium"
-text_editor/external/exec_flags = "{project} --goto {file}:{line}:{col}"
+text_editor/external/exec_path = "/home/linuxbrew/.linuxbrew/bin/nvim"
+text_editor/external/exec_flags = "--server ./godothost --remote-send \"<C-\\><C-N>:n{file}<CR>{line}G{col}|\""
 text_editor/completion/idle_parse_delay = 1.5
 text_editor/completion/idle_parse_delay_with_errors_found = 0.5
 text_editor/completion/auto_brace_complete = true
@@ -468,7 +468,7 @@ shortcuts = [{
 "shortcuts": [SubResource("InputEventKey_23e0j")]
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_1",
-"shortcuts": [SubResource("InputEventKey_pg2c3")]
+"shortcuts": [SubResource("InputEventKey_1owxi")]
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
