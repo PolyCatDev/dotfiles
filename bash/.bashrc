@@ -20,7 +20,7 @@ export EDITOR="nvim"
 export GOPATH=~/.local/go
 
 # Aliases
-alias ls="lsd"
+command -v lsd > /dev/null && alias ls="lsd"
 alias editdosbox="$EDITOR ~/.var/app/io.github.dosbox-staging/config/dosbox/dosbox-staging.conf"
 alias editbash="$EDITOR ~/.bashrc"
 
