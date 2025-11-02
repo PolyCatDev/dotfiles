@@ -1,4 +1,10 @@
 tmux/.config/tmux/plugins/*
 !tmux/.config/tmux/plugins/tpm
 !tmux/.config/tmux/plugins/tpm/*
+
 bash/.local/share/fonts/.uuid
+
+ghostty/.local/share/fonts/.uuid
+
+godot/.config/godot/recent_dirs
+godot/.config/godot/favorite_dirs
