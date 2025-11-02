@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=6 format=3]
+[gd_resource type="EditorSettings" load_steps=7 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_bjm71"]
 device = -1
@@ -15,13 +15,19 @@ device = -1
 physical_keycode = 83
 unicode = 115
 
-[sub_resource type="InputEventKey" id="InputEventKey_1owxi"]
+[sub_resource type="InputEventKey" id="InputEventKey_q4jf6"]
 keycode = 4194326
 
 [sub_resource type="InputEventKey" id="InputEventKey_pn5bg"]
 device = -1
 ctrl_pressed = true
 keycode = 32
+unicode = 32
+
+[sub_resource type="InputEventKey" id="InputEventKey_tx0wn"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 32
 unicode = 32
 
 [resource]
@@ -35,8 +41,9 @@ interface/editor/ui_layout_direction = 0
 interface/editor/display_scale = 0
 interface/editor/custom_display_scale = 1.0
 interface/editor/editor_screen = -2
+interface/editor/tablet_driver = -1
 interface/editor/project_manager_screen = -2
-network/connection/engine_version_update_mode = 2
+network/connection/check_for_updates = 2
 interface/editor/use_embedded_menu = false
 interface/editor/use_native_file_dialogs = false
 interface/editor/expand_to_title = true
@@ -68,6 +75,7 @@ interface/editor/unfocused_low_processor_mode_sleep_usec = 100000
 interface/editor/import_resources_when_unfocused = false
 interface/editor/vsync_mode = 1
 interface/editor/update_continuously = false
+interface/editor/collapse_main_menu = false
 interface/editors/show_scene_tree_root_selection = true
 interface/editors/derive_script_globals_by_name = true
 docks/scene_tree/ask_before_revoking_unique_name = true
@@ -84,8 +92,10 @@ interface/inspector/horizontal_vector2_editing = false
 interface/inspector/horizontal_vector_types_editing = true
 interface/inspector/open_resources_in_current_inspector = true
 interface/inspector/resources_to_open_in_new_inspector = PackedStringArray("Script", "MeshLibrary")
+interface/accessibility/accessibility_support = 0
 interface/inspector/default_color_picker_mode = 0
 interface/inspector/default_color_picker_shape = 3
+interface/inspector/color_picker_show_intensity = true
 interface/theme/follow_system_theme = false
 interface/theme/preset = "Custom"
 interface/theme/spacing_preset = "Default"
@@ -102,10 +112,11 @@ interface/theme/corner_radius = 3
 interface/theme/base_spacing = 4
 interface/theme/additional_spacing = 0
 interface/theme/custom_theme = ""
+interface/touchscreen/enable_touch_optimizations = false
+interface/touchscreen/enable_long_press_as_right_click = false
 interface/touchscreen/enable_pan_and_scale_gestures = false
 interface/touchscreen/scale_gizmo_handles = 1
-interface/touchscreen/enable_long_press_as_right_click = false
-interface/touchscreen/increase_scrollbar_touch_area = false
+interface/touchscreen/touch_actions_panel = 1
 interface/scene_tabs/display_close_button = 1
 interface/scene_tabs/show_thumbnail_on_hover = true
 interface/scene_tabs/maximum_width = 350
@@ -145,13 +156,13 @@ docks/scene_tree/start_create_dialog_fully_expanded = false
 docks/scene_tree/auto_expand_to_selected = true
 docks/scene_tree/center_node_on_reparent = false
 docks/scene_tree/hide_filtered_out_parents = true
+docks/scene_tree/accessibility_warnings = false
 docks/filesystem/thumbnail_size = 64
 docks/filesystem/always_show_folders = true
 docks/filesystem/textfile_extensions = "txt,md,cfg,ini,log,json,yml,yaml,toml,xml"
 docks/filesystem/other_file_extensions = "ico,icns"
 docks/property_editor/auto_refresh_interval = 0.2
 docks/property_editor/subresource_hue_tint = 0.75
-text_editor/theme/line_spacing = 6
 text_editor/theme/color_theme = "Default"
 text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
 text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
@@ -171,7 +182,7 @@ text_editor/theme/highlighting/completion_scroll_hovered_color = Color(1, 1, 1, 
 text_editor/theme/highlighting/completion_font_color = Color(0.780563, 0.780563, 0.780563, 1)
 text_editor/theme/highlighting/text_color = Color(0.780563, 0.780563, 0.780563, 1)
 text_editor/theme/highlighting/line_number_color = Color(0.780563, 0.780563, 0.780563, 0.5)
-text_editor/theme/highlighting/safe_line_number_color = Color(0.780563, 0.936676, 0.780563, 0.75)
+text_editor/theme/highlighting/safe_line_number_color = Color(0.780563, 0.9366756, 0.780563, 0.75)
 text_editor/theme/highlighting/caret_color = Color(1, 1, 1, 1)
 text_editor/theme/highlighting/caret_background_color = Color(0, 0, 0, 1)
 text_editor/theme/highlighting/text_selected_color = Color(0, 0, 0, 0)
@@ -184,6 +195,7 @@ text_editor/theme/highlighting/number_color = Color(0.63, 1, 0.88, 1)
 text_editor/theme/highlighting/function_color = Color(0.34, 0.7, 1, 1)
 text_editor/theme/highlighting/member_variable_color = Color(0.736, 0.88, 1, 1)
 text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(1, 0.87, 0.4, 0.15)
 text_editor/theme/highlighting/bookmark_color = Color(0.08, 0.49, 0.98, 1)
 text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
 text_editor/theme/highlighting/executing_line_color = Color(0.98, 0.89, 0.27, 1)
@@ -191,6 +203,19 @@ text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
 text_editor/theme/highlighting/folded_code_region_color = Color(0.68, 0.46, 0.77, 0.2)
 text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
 text_editor/theme/highlighting/search_result_border_color = Color(0.41, 0.61, 0.91, 0.38)
+text_editor/theme/highlighting/gdscript/function_definition_color = Color(0.4, 0.9, 1, 1)
+text_editor/theme/highlighting/gdscript/global_function_color = Color(0.64, 0.64, 0.96, 1)
+text_editor/theme/highlighting/gdscript/node_path_color = Color(0.72, 0.77, 0.49, 1)
+text_editor/theme/highlighting/gdscript/node_reference_color = Color(0.39, 0.76, 0.35, 1)
+text_editor/theme/highlighting/gdscript/annotation_color = Color(1, 0.7, 0.45, 1)
+text_editor/theme/highlighting/gdscript/string_name_color = Color(1, 0.76, 0.65, 1)
+text_editor/theme/highlighting/comment_markers/critical_color = Color(0.77, 0.35, 0.35, 1)
+text_editor/theme/highlighting/comment_markers/warning_color = Color(0.72, 0.61, 0.48, 1)
+text_editor/theme/highlighting/comment_markers/notice_color = Color(0.56, 0.67, 0.51, 1)
+text_editor/theme/highlighting/comment_markers/critical_list = "ALERT,ATTENTION,CAUTION,CRITICAL,DANGER,SECURITY"
+text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING"
+text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,TEST,TESTING"
+text_editor/appearance/enable_inline_color_picker = true
 text_editor/appearance/caret/type = 0
 text_editor/appearance/caret/caret_blink = true
 text_editor/appearance/caret/caret_blink_interval = 0.5
@@ -234,6 +259,7 @@ text_editor/behavior/files/convert_indent_on_save = true
 text_editor/behavior/files/auto_reload_scripts_on_external_change = false
 text_editor/behavior/files/auto_reload_and_parse_scripts_on_save = true
 text_editor/behavior/files/open_dominant_script_on_scene_change = false
+text_editor/behavior/files/drop_preload_resources_as_uid = true
 text_editor/behavior/documentation/enable_tooltips = true
 text_editor/script_list/show_members_overview = true
 text_editor/script_list/sort_members_outline_alphabetically = false
@@ -243,7 +269,7 @@ text_editor/script_list/highlight_scene_scripts = true
 text_editor/script_list/group_help_pages = true
 text_editor/script_list/sort_scripts_by = 0
 text_editor/script_list/list_script_names_as = 0
-text_editor/external/exec_path = "/home/linuxbrew/.linuxbrew/bin/nvim"
+text_editor/external/exec_path = "/usr/sbin/nvim"
 text_editor/external/exec_flags = "--server ./godothost --remote-send \"<C-\\><C-N>:n{file}<CR>{line}G{col}|\""
 text_editor/completion/idle_parse_delay = 1.5
 text_editor/completion/idle_parse_delay_with_errors_found = 0.5
@@ -270,6 +296,7 @@ editors/grid_map/preview_size = 64
 editors/3d/primary_grid_color = Color(0.56, 0.56, 0.56, 0.5)
 editors/3d/secondary_grid_color = Color(0.38, 0.38, 0.38, 0.5)
 editors/3d/selection_box_color = Color(1, 0.5, 0, 1)
+editors/3d/active_selection_box_color = Color(1.5, 0.75, 0, 1)
 editors/3d_gizmos/gizmo_colors/instantiated = Color(0.7, 0.7, 0.7, 0.6)
 editors/3d_gizmos/gizmo_colors/joint = Color(0.5, 0.8, 1, 1)
 editors/3d_gizmos/gizmo_colors/aabb = Color(0.28, 0.8, 0.82, 1)
@@ -299,6 +326,7 @@ editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision = Color(0.9, 0.6, 0.
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/3d_gizmos/gizmo_settings/bone_shape = 1
 editors/3d_gizmos/gizmo_settings/path3d_tilt_disk_size = 0.8
+editors/3d_gizmos/gizmo_settings/lightmap_gi_probe_size = 0.4
 editors/3d/primary_grid_steps = 8
 editors/3d/grid_size = 200
 editors/3d/grid_division_level_max = 2
@@ -348,6 +376,7 @@ editors/2d/bone_outline_size = 2.0
 editors/2d/viewport_border_color = Color(0.4, 0.4, 1, 0.4)
 editors/2d/use_integer_zoom_by_default = false
 editors/2d/zoom_speed_factor = 1.1
+editors/2d/ruler_width = 16.0
 editors/bone_mapper/handle_colors/unset = Color(0.3, 0.3, 0.3, 1)
 editors/bone_mapper/handle_colors/set = Color(0.1, 0.6, 0.25, 1)
 editors/bone_mapper/handle_colors/missing = Color(0.8, 0.2, 0.8, 1)
@@ -358,12 +387,16 @@ editors/panning/animation_editors_panning_scheme = 1
 editors/panning/simple_panning = false
 editors/panning/warped_mouse_panning = true
 editors/panning/2d_editor_pan_speed = 20
+editors/panning/zoom_style = 0
 editors/tiles_editor/display_grid = true
 editors/tiles_editor/highlight_selected_layer = true
 editors/tiles_editor/grid_color = Color(1, 0.5, 0.2, 0.5)
 editors/polygon_editor/point_grab_radius = 8
 editors/polygon_editor/show_previous_outline = true
 editors/polygon_editor/auto_bake_delay = 1.5
+editors/animation/default_animation_step = 0.033333335
+editors/animation/default_fps_mode = 0
+editors/animation/default_fps_compatibility = true
 editors/animation/autorename_animation_tracks = true
 editors/animation/confirm_insert_track = true
 editors/animation/default_create_bezier_tracks = false
@@ -417,6 +450,7 @@ network/debug/remote_host = "127.0.0.1"
 network/debug/remote_port = 6007
 debugger/auto_switch_to_remote_scene_tree = false
 debugger/auto_switch_to_stack_trace = true
+debugger/max_node_selection = 20
 debugger/profiler_frame_history_size = 3600
 debugger/profiler_frame_max_functions = 64
 debugger/profiler_target_fps = 60
@@ -431,6 +465,7 @@ input/buffering/use_accumulated_input = true
 project_manager/sorting_order = 0
 project_manager/directory_naming_convention = 1
 project_manager/default_renderer = "forward_plus"
+interface/touchscreen/increase_scrollbar_touch_area = false
 editors/3d/navigation/orbit_modifier = 0
 editors/3d/navigation/pan_modifier = 1
 editors/3d/navigation/zoom_modifier = 4
@@ -445,7 +480,7 @@ export/web/tls_certificate = ""
 export/windows/rcedit = ""
 export/windows/osslsigncode = ""
 export/windows/wine = ""
-_default_feature_profile = ""
+_default_feature_profile = "PolyCat"
 _use_favorites_root_selection = false
 network/debug_adapter/request_timeout = 1000
 editors/grid_map/editor_side = 1
@@ -468,13 +503,16 @@ shortcuts = [{
 "shortcuts": [SubResource("InputEventKey_23e0j")]
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_1",
-"shortcuts": [SubResource("InputEventKey_1owxi")]
+"shortcuts": [SubResource("InputEventKey_q4jf6")]
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
 }, {
 "name": "bottom_panels/toggle_filesystem_bottom_panel",
 "shortcuts": [SubResource("InputEventKey_pn5bg")]
+}, {
+"name": "docks/open_filesystem",
+"shortcuts": [SubResource("InputEventKey_tx0wn")]
 }]
 builtin_action_overrides = []
 metadata/script_setup_templates_dictionary = {
