@@ -29,7 +29,7 @@ return {
             -- # Keymap
             vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, {})
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-            vim.keymap.set("i", "<C-Space>", vim.lsp.buf.signature_help, {})
+            vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
             vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, {})
 
             vim.lsp.enable({
