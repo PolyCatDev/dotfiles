@@ -8,7 +8,6 @@
     "editor.minimap.enabled": false,
     "redhat.telemetry.enabled": false,
     "workbench.sideBar.location": "left",
-    "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
     "terminal.integrated.fontFamily": "'Hack Nerd Font'",
     "editor.fontLigatures": false,
@@ -59,8 +58,19 @@
         {
             "before": ["<leader>", "p"],
             "commands": ["workbench.action.quickOpen"]
-        }
+        },
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
+        { "before": ["Down"], "after": ["g", "j"] },
+        { "before": ["Up"],   "after": ["g", "k"] },
+
     ],
+
+    "vim.insertModeKeyBindings": [
+        { "before": ["<down>"], "after": ["<C-o>", "g", "j"] },
+        { "before": ["<up>"],   "after": ["<C-o>", "g", "k"] }
+    ],
+
     // To improve performance,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
@@ -102,5 +112,9 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "C_Cpp.intelliSenseEngine": "disabled"
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "window.commandCenter": false,
+    "markdown-preview-enhanced.enableLinkify": false,
+    "markdown-preview-enhanced.previewTheme": "newsprint.css",
+    "markdown-preview-enhanced.revealjsTheme": "beige.css"
 }
