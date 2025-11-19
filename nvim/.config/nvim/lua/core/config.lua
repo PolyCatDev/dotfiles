@@ -1,10 +1,11 @@
--- Enables Numbers
-vim.cmd("set number")
+-- Enables Number Lines
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Sets tab to 4 spaces
-vim.cmd("set tabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set expandtab")
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 -- Disable soft wrap
 vim.o.wrap = false
