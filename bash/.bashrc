@@ -38,4 +38,19 @@ upd() {
   rpm-ostree cancel && rpm-ostree upgrade
 }
 
+pyprojectinit() {
+cat << EOF > pyproject.toml
+[project]
+name = "$(basename $PWD)"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=$(python --version | awk '{print $2}' | rev | cut -d. -f2- | rev)"
+dependencies = []
+EOF
+
+echo -e "\e[32mCreated \"pyproject.toml\"\e[0m"
+
+}
+
 alias mkpio='/bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/PolyCatDev/clangd-platformio/refs/heads/main/wizard.sh)"'
