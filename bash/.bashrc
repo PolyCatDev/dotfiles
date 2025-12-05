@@ -18,6 +18,7 @@ eval "$(zoxide init --cmd cd bash)"
 # Exports
 export EDITOR="nvim"
 export GOPATH=~/.local/go
+export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
 
 # Aliases
 command -v lsd > /dev/null && alias ls="lsd"
