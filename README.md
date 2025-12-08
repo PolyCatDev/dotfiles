@@ -24,7 +24,7 @@ This is the place wehere I store my various config files.
 >
 > Run this for quick setup of the ones I actually use
 >```bash
->stow bash/ tmux/ codium/ ghostty/ git/ godot/ nvim/ otd/ wlxoverlay/
+>stow bash/ tmux/ codium/ ghostty/ git/ godot/ nvim/ wlxoverlay/
 >```
 > 
 > [Watch tutorial on YouTube](https://youtu.be/y6XCebnB9gs)
