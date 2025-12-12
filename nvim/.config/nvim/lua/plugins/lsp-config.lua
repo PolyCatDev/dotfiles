@@ -16,7 +16,7 @@ return {
                 "astro",
                 "tailwindcss",
                 "clangd",
-                "docker_compose_language_service",
+                "docker_language_server",
                 "gh_actions_ls",
             },
         },
@@ -43,7 +43,7 @@ return {
                 "clangd",
                 "gdscript",
                 "gdshader_lsp",
-                "docker_compose_language_service",
+                "docker_language_server",
                 "gh_actions_ls",
             })
 
