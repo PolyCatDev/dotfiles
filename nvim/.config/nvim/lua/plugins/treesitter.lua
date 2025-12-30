@@ -2,9 +2,8 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
-		lazy = false,
 		init = function()
-			vim.g.loaded_nvim_treesitter = 1 -- Disable nvim-treesitter's installation
+			vim.g.loaded_nvim_treesitter = 1
 		end,
 	},
 	{
