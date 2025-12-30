@@ -9,6 +9,7 @@ return {
 	{
 		"lewis6991/ts-install.nvim",
 		lazy = false,
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("ts-install").setup({
 				ensure_install = {
