@@ -7,6 +7,7 @@ This is the place wehere I store my various config files.
 - Bash config
 - Ghostty config
 - Foot term config
+- Fastfetch
 - Direwolf base config
 - Git config
 - Utility Scripts
