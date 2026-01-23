@@ -17,7 +17,7 @@ eval "$(zoxide init --cmd cd bash)"
 
 # Exports
 export EDITOR="nvim"
-export GOPATH="~/.local/share/go"
+export GOPATH="$HOME/.local/share/go"
 export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
 
 # Aliases
