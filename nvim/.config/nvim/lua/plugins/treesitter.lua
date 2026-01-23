@@ -5,11 +5,13 @@ return {
 		init = function()
 			require("nvim-treesitter").install({
 				"lua",
+				"markdown",
 				"git_config",
 				"git_rebase",
 				"gitattributes",
 				"gitcommit",
 				"gitignore",
+				"vim",
 			})
 		end,
 	},
@@ -20,6 +22,7 @@ return {
 		config = function()
 			require("treesitter-autoinstall").setup({
 				ignore = {
+					"help",
 					"mason",
 					"mason_backdrop",
 					"lazy",
