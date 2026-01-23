@@ -27,6 +27,7 @@ return {
 					"mason_backdrop",
 					"lazy",
 					"lazy_backdrop",
+					"no-neck-pain",
 				},
 			})
 		end,
