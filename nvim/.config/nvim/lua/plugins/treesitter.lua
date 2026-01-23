@@ -3,24 +3,28 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
 		init = function()
-			vim.g.loaded_nvim_treesitter = 1
+			require("nvim-treesitter").install({
+				"lua",
+				"git_config",
+				"git_rebase",
+				"gitattributes",
+				"gitcommit",
+				"gitignore",
+			})
 		end,
 	},
 	{
-		"lewis6991/ts-install.nvim",
+		"mks-h/treesitter-autoinstall.nvim",
 		lazy = false,
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
-			require("ts-install").setup({
-				ensure_install = {
-					"lua",
-					"git_config",
-					"git_rebase",
-					"gitattributes",
-					"gitcommit",
-					"gitignore",
+			require("treesitter-autoinstall").setup({
+				ignore = {
+					"mason",
+					"mason_backdrop",
+					"lazy",
+					"lazy_backdrop",
 				},
-				auto_install = true,
 			})
 		end,
 	},
