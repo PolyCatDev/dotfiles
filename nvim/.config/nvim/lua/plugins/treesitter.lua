@@ -28,6 +28,7 @@ return {
 					"lazy",
 					"lazy_backdrop",
 					"no-neck-pain",
+					"NvimTree",
 				},
 			})
 		end,
