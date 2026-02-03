@@ -3,7 +3,6 @@ Oh hi there. You found my NeoVim config
 # Features
 
 - **Syntax Highlighting:** Using [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- **Auto Pairs:** Using [autopairs](https://github.com/windwp/nvim-autopairs)
 - **Search:** Using [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - **Code Completion:** Lua, Py, Ruby, Go, Godot, C, C++ and web formats by default
 - **Code Formatters:** Using [none-ls](https://github.com/nvimtools/none-ls.nvim) and [Mason](https://github.com/williamboman/mason.nvim)
