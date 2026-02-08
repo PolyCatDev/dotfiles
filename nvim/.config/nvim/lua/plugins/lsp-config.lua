@@ -20,6 +20,17 @@ local tools = {
 	"gdtoolkit",
 }
 
+local function extend_list(list, extra)
+	local new = {}
+	for i, v in ipairs(list) do
+		new[i] = v
+	end
+	for _, v in ipairs(extra) do
+		new[#new + 1] = v
+	end
+	return new
+end
+
 return {
 
 	{ -- LSP Package Manager
@@ -43,7 +54,7 @@ return {
 			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
 			vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, {})
 
-			vim.lsp.enable(lsp_servers)
+			vim.lsp.enable(extend_list(lsp_servers, { "gdscript", "gdshader_lsp" }))
 
 			-- Compose filetype detector
 			local util = require("lspconfig.util")
