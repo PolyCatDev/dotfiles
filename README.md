@@ -6,7 +6,6 @@ This is the place wehere I store my various config files.
 
 - Bash config
 - Ghostty config
-- Foot term config
 - Fastfetch
 - Direwolf base config
 - Git config
@@ -14,12 +13,10 @@ This is the place wehere I store my various config files.
 - Tmux config
 - NeoVim config
 - VSCodium config
-- Zed editor config
 - Godot Engine settings
 - wlxoverlay config
 - TF2 binds
 - OpenTabletDriver presets
-- An archive of my NixOS config
 
 > [!TIP]
 > All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
