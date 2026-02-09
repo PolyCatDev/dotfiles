@@ -21,10 +21,10 @@ This is the place wehere I store my various config files.
 > [!TIP]
 > All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
 >
-> Run this for quick setup of the ones I actually use
->```bash
->stow bash/ tmux/ codium/ ghostty/ git/ godot/ nvim/ fastfetch/ wlxoverlay/ util-scripts/
->```
+> The files are symlinked automatically using a bash script.
+> ```bash
+> chmod +x ./sync.sh && ./sync.sh
+> ```
 > 
 > [Watch tutorial on YouTube](https://youtu.be/y6XCebnB9gs)
 > 
