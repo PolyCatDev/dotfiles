@@ -36,7 +36,7 @@ upd() {
   echo " "
 
   echo -e "\e[32mUpdating RPM Packages\e[0m"
-  rpm-ostree cancel && rpm-ostree upgrade
+  sudo bootc upgrade
 }
 
 alias mkpio='/bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/PolyCatDev/clangd-platformio/refs/heads/main/wizard.sh)"'
