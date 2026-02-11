@@ -24,19 +24,6 @@ export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
 command -v lsd > /dev/null && alias ls="lsd"
 alias dosedit="$EDITOR ~/.var/app/io.github.dosbox-staging/config/dosbox/dosbox-staging.conf"
 alias bashedit="$EDITOR ~/.bashrc"
-
-# Functions
-upd() {
-  echo -e "\e[32mUpdating Homebrew Packages\e[0m"
-  brew update && brew upgrade
-  echo " "
-
-  echo -e "\e[32mUpdating Flatpak Packages\e[0m"
-  flatpak update -y
-  echo " "
-
-  echo -e "\e[32mUpdating RPM Packages\e[0m"
-  sudo bootc upgrade
-}
+alias upd="ujust update"
 
 alias mkpio='/bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/PolyCatDev/clangd-platformio/refs/heads/main/wizard.sh)"'
