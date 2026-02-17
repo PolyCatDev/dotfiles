@@ -1,11 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-SESSION=$(basename "$PWD")
+if [ -n "${1-}" ]; then
+    cd $1
+fi
 
-tmux new-session -d -s "$SESSION" "$EDITOR"
-tmux new-window -t "$SESSION"
-tmux select-window -t "$SESSION:1"
-tmux attach -t "$SESSION"
+session=$(basename "$PWD")
 
+tmux new-session -d -s "$session" "$EDITOR"
+tmux new-window -t "$session"
+tmux select-window -t "$session:1"
+tmux attach -t "$session"
