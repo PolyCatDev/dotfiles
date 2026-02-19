@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.wrap = true -- Enable soft wrapping
 		vim.opt_local.linebreak = true -- Don't break in the middle of a word
         vim.opt_local.spell = true     -- Enable spellcheck/autocorrect
+        vim.opt_local.spelllang = "en_us"
 
 		local opts = { buffer = true, noremap = true, silent = true }
 
@@ -34,6 +35,16 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("v", "<Up>", "gk", opts)
 	end,
 })
+
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "gitcommit",
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "en_us"
+  end
+})
+
 
 -- Setup Godot Logic
 vim.api.nvim_create_autocmd("FileType", {
