@@ -4,34 +4,34 @@ set -euo pipefail
 
 #Config
 
-SESSION_NAME=debi
-MOUNTDIR=server_debi_mount
-SSH_ADDRESS=debi
-REMOTE_DIR=/home/polycat
+session_name=debi
+mountdir=server_debi_mount
+ssh_address=debi
+remote_dir=/home/polycat/
 
 # Script
 
-MOUNTDIR="/tmp/$MOUNTDIR"
+mountdir="/tmp/$mountdir"
 
 if [[ ${1:-} == "a" || ${1:-} == "attach" ]]; then
-    mkdir -p "$MOUNTDIR"
+    mkdir -p "$mountdir"
 
-    if ! mountpoint -q "$MOUNTDIR"; then
-        sshfs "$SSH_ADDRESS:$REMOTE_DIR" "$MOUNTDIR"
+    if ! mountpoint -q "$mountdir"; then
+        sshfs "$ssh_address:$remote_dir" "$mountdir"
     fi
 
-    cd "$MOUNTDIR"
+    cd "$mountdir"
 
-    tmux new-session -d -s "$SESSION_NAME" "$EDITOR"
-    tmux new-window -t "$SESSION_NAME" "ssh $SSH_ADDRESS"
-    tmux select-window -t "$SESSION_NAME:1"
-    tmux attach -t "$SESSION_NAME"
+    tmux new-session -d -s "$session_name" "$EDITOR"
+    tmux new-window -t "$session_name" "ssh $ssh_address"
+    tmux select-window -t "$session_name:1"
+    tmux attach -t "$session_name"
 
 elif [[ ${1:-} == "d" || ${1:-} == "detach" ]]; then
-    tmux kill-session -t "$SESSION_NAME"
+    tmux kill-session -t "$session_name"
     cd ..
-    fusermount -u "$MOUNTDIR"
-    rm -rf "$MOUNTDIR"
+    fusermount -u "$mountdir"
+    rm -rf "$mountdir"
 
 else
     echo -e "\e[31mERROR: No arguments provided\e[0m"
