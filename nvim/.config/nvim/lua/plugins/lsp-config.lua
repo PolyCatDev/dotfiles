@@ -1,6 +1,7 @@
 local lsp_servers = {
 	"lua_ls",
 	"basedpyright",
+    "tclsp",
 	"gopls",
 	"html",
 	"vtsls",
