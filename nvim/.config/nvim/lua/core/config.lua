@@ -56,12 +56,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
-if gdproject then
-	io.close(gdproject)
-	vim.fn.serverstart("./godothost")
-end
-
 -- Setup 2 space tabs for C and C++ files
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "c", "cpp" },
