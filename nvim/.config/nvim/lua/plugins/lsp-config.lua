@@ -1,15 +1,12 @@
 local lsp_servers = {
 	"lua_ls",
 	"basedpyright",
-    "tclsp",
 	"gopls",
 	"html",
 	"vtsls",
 	"astro",
 	"tailwindcss",
 	"clangd",
-	"docker_language_server",
-	"gh_actions_ls",
 }
 
 local tools = {
@@ -17,84 +14,50 @@ local tools = {
 	"prettier",
 	"black",
 	"isort",
-	"mesonlsp",
 	"gdtoolkit",
 }
 
-local function extend_list(list, extra)
-	local new = {}
-	for i, v in ipairs(list) do
-		new[i] = v
-	end
-	for _, v in ipairs(extra) do
-		new[#new + 1] = v
-	end
-	return new
-end
-
 return {
 
-	{ -- LSP Package Manager
-		"mason-org/mason-lspconfig.nvim",
+	{ -- LSP installer and configurator
+		"neovim/nvim-lspconfig",
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
-			"neovim/nvim-lspconfig",
+			{ "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = lsp_servers } },
 		},
-		opts = {
-			ensure_installed = lsp_servers,
-		},
-	},
+		init = function()
+            -- Godot specic setup
+			local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
+			if gdproject then
+				io.close(gdproject)
+				vim.fn.serverstart("./godothost")
+			end
 
-	{ -- LSP Server Default Configs
-		"neovim/nvim-lspconfig",
-
+			vim.lsp.enable({ "gdscript", "gdshader_lsp" })
+		end,
 		config = function()
 			-- # Keymap
 			vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
 			vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, {})
-
-			vim.lsp.enable(extend_list(lsp_servers, { "gdscript", "gdshader_lsp" }))
-
-			-- Compose filetype detector
-			local util = require("lspconfig.util")
-			vim.filetype.add({
-				filename = {
-					["compose.yml"] = "yaml.docker-compose",
-					["compose.yaml"] = "yaml.docker-compose",
-					["docker-compose.yml"] = "yaml.docker-compose",
-					["docker-compose.yaml"] = "yaml.docker-compose",
-				},
-			})
 		end,
 	},
 
-	{ -- Extra tools that Mason does't automatically install for reasons
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		opts = {
-			ensure_installed = tools,
-		},
-	},
-
-	{ -- Link external tools as LSPs
+	{ -- Tool installer and configurator
 		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim", opts = { ensure_installed = tools } },
+		},
 		config = function()
 			local null_ls = require("null-ls")
-
 			null_ls.setup({
 				sources = {
-					-- Lua
 					null_ls.builtins.formatting.stylua,
-
-					-- Python
 					null_ls.builtins.formatting.black,
 					null_ls.builtins.formatting.isort,
-
-					-- Prettier
 					null_ls.builtins.formatting.prettier,
-
-					--GDToolkit
 					null_ls.builtins.formatting.gdformat,
 				},
 			})
@@ -105,7 +68,7 @@ return {
 		end,
 	},
 
-	{ -- LSP Engine
+	{ -- LSP completion engine
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
@@ -117,8 +80,6 @@ return {
 			vim.opt.pumheight = 12
 			cmp.setup({
 				mapping = cmp.mapping.preset.insert({
-					["<Tab>"] = cmp.mapping.select_next_item(),
-					["<S-Tab>"] = cmp.mapping.select_prev_item(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = {
