@@ -12,6 +12,7 @@ return {
 				"gitcommit",
 				"gitignore",
 				"vim",
+				"vimdoc",
 			})
 		end,
 	},
