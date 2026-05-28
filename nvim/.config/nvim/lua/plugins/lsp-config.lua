@@ -26,7 +26,7 @@ return {
 			{ "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = lsp_servers } },
 		},
 		init = function()
-            -- Godot specic setup
+            -- Godot specific setup
 			local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
 			if gdproject then
 				io.close(gdproject)
