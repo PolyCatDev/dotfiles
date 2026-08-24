@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Neovim
+Comment=Hyperextensible Vim-based text editor
+Icon=neovim
+Exec=ghostty -e /home/linuxbrew/.linuxbrew/bin/nvim %F
+Terminal=false
+Type=Application
+MimeType=text/plain;text/*;
+Categories=Utility;TextEditor;
