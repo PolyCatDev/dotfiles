@@ -25,11 +25,20 @@ Oh hi there. You found my NeoVim config
 
 - `leader` = space key
 - `leader + p` = file search
-- `leader + o` = full text search
+- `leader + o` = live grep
 - `leader + t` = open file tree
 - `leader + f` = format current buffer
-- `leader + [` = open diagnostic box for error
-- `ctrl + k` = open signature help
-- `shift + k` = inspect hovered keyword
+- `gd` = go to definition
+- `gD` = go to declaration
+- `gi` = go to implementation
+- `gr` = find references
+- `K` = hover documentation
+- `leader + ]` = signature help
+- `leader + [` = line diagnostics
 - `leader + g` = see git hunk
 - `leader + n` = clear highlight
+
+
+# User-defined commands
+
+- `:DeleteCurrentFile` = delete file currently loaded in buffer

@@ -37,10 +37,14 @@ return {
 		end,
 		config = function()
 			-- # Keymap
-			vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, {})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
-			vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, {})
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+            vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+            vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, { desc = "Signature help" })
+            vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 		end,
 	},
 
