@@ -1,6 +1,7 @@
 [user]
 	email = contact.polycat@proton.me
 	name = PolyCat
+	signingkey = 31749E9A16F7E1F8697DF09AB1EFADEC433DDF46
 [credential]
 	helper = cache --timeout=3600
 [init]
@@ -10,3 +11,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
