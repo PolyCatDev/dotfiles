@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=env DRI_PRIME=1 godot
+Exec=godot-brew-dotnet-wrapper.sh %U
 Icon=godot
 Name=Godot
 Terminal=false
