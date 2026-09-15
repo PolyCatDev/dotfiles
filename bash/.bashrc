@@ -22,8 +22,8 @@ export DOTNET_ROOT="/home/linuxbrew/.linuxbrew/opt/dotnet/libexec"
 
 # Aliases
 command -v lsd > /dev/null && alias ls="lsd"
-alias dosedit="$EDITOR ~/.var/app/io.github.dosbox-staging/config/dosbox/dosbox-staging.conf"
-alias bashedit="$EDITOR ~/.bashrc"
+alias editdos="$EDITOR ~/.var/app/io.github.dosbox-staging/config/dosbox/dosbox-staging.conf"
+alias editbash="$EDITOR ~/.bashrc"
 alias upd="ujust update"
 
 alias mkpio='/bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/PolyCatDev/clangd-platformio/refs/heads/main/wizard.sh)"'
