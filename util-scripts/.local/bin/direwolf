@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# Wrapper for Homebrew installed direwolf
+cd $(brew --prefix)/share/direwolf && command direwolf -c $HOME/.config/direwolf/direwolf.conf
