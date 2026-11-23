@@ -49,7 +49,7 @@ if __name__ == "__main__":
         """)
 
 
-    append_directory_paths(stow_modules["in use"], repo_root_path, excluded_dirs)
-    append_directory_paths(stow_modules["not in use"], Path("./archive"), excluded_dirs)
+    append_directory_paths(stow_modules["in use"], root_path, excluded_dirs)
+    append_directory_paths(stow_modules["not in use"], archive_path, excluded_dirs)
 
     print(f"{readme_header}\n{generate_module_index(stow_modules)}\n{readme_footer}".rstrip("\n"), end="")

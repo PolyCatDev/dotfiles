@@ -14,7 +14,7 @@ def append_directory_paths(empty_list: list[Path], parent_directory: Path, exclu
 
 if __name__ == "__main__":
 
-    append_directory_paths(stow_modules["in use"], Path("."), excluded_dirs)
+    append_directory_paths(stow_modules["in use"], root_path, excluded_dirs)
 
     for path in stow_modules["in use"]:
         print(path.name, end=" ")
