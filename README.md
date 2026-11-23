@@ -10,13 +10,14 @@ configs not in use are simply ignored.
 
 ### Configs in use
 
-- $recycle.bin
-- .trash-1000
-- Dos_drive
-- Dotfiles
-- Main
-- Steamlibrary
-- System volume information
+- Bash
+- Fastfetch
+- Ghostty
+- Git
+- Godot
+- Nvim
+- Tmux
+- Util-scripts
 
 ### Configs not in use
 
