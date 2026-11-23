@@ -38,13 +38,13 @@ if __name__ == "__main__":
         To link configs run:
 
         ```sh
-        chmod +x auto.py && auto.py sync
+        just sync
         ```
 
         And to delete symlinks run:
 
         ```sh
-        chmod +x auto.py && auto.py sync -d
+        just sync -D
         ```
         """)
 

@@ -32,11 +32,11 @@ configs not in use are simply ignored.
 To link configs run:
 
 ```sh
-chmod +x auto.py && auto.py sync
+just sync
 ```
 
 And to delete symlinks run:
 
 ```sh
-chmod +x auto.py && auto.py sync -d
+just sync -D
 ```
