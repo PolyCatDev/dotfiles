@@ -1,9 +1,9 @@
 
 set default-list := true
 
-make_updated_nvim_plugins_commit:
+commit_updated_nvim_plugins_chore:
     git add nvim/.config/nvim/lazy-lock.json
-    git commit -m "nvim: Updated plugins"
+    git commit -m "nvim(chore): Updated plugins"
 
 sync stow_option="":
     mkdir -p ~/.config/tmux/plugins/
