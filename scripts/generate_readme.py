@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     readme_header = dedent("""\
         Welcome to my dotfiles repo. This is where I store config
-            files for the tools I use.
+        files for the tools I use.
         """)
 
     readme_footer = dedent("""\
