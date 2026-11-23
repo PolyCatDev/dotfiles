@@ -12,5 +12,5 @@ sync stow_option="":
     
     stow --target=${HOME} --verbose=1 {{stow_option}} $(python -m _repo_scripts.get_public_modules)
 
-regenerate_readme:
+generate_readme:
     echo "$(python -m _repo_scripts.generate_readme)" > README.md
