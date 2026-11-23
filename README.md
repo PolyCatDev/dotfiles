@@ -1,32 +1,42 @@
-# What is this?
+Welcome to my dotfiles repo. This is where I store the
+configs of the tools I use.
 
-This is the place wehere I store my various config files.
+## Configs in this repo
 
-# What will I find here?
+In use configs get automatically automatically symlinked
+to their respective directories using
+[GNU Stow](https://www.gnu.org/software/stow/) and
+configs not in use are simply ignored.
 
-- Bash config
-- Ghostty config
-- Fastfetch
-- Direwolf base config
-- Git config
-- Utility Scripts
-- Tmux config
-- NeoVim config
-- VSCodium config
-- Godot Engine settings
-- wlxoverlay config
-- TF2 binds
-- OpenTabletDriver presets
+### Configs in use
 
-> [!TIP]
-> All files can be easily managed with [GNU Stow](https://www.gnu.org/software/stow/)
->
-> The files are symlinked automatically using a bash script.
-> ```bash
-> chmod +x ./sync.sh && ./sync.sh
-> ```
-> 
-> [Watch tutorial on YouTube](https://youtu.be/y6XCebnB9gs)
-> 
-><a href="https://youtu.be/y6XCebnB9gs"><img src="https://img.youtube.com/vi/y6XCebnB9gs/maxresdefault.jpg" width="600" alt="Stow Tutorial Image Thumbnail"/></a>
+- $recycle.bin
+- .trash-1000
+- Dos_drive
+- Dotfiles
+- Main
+- Steamlibrary
+- System volume information
 
+### Configs not in use
+
+- Alacritty
+- Codium
+- Direwolf
+- Otd
+- Tf2
+- Wlxoverlay
+
+## Syncing configs
+
+To link configs run:
+
+```sh
+chmod +x auto.py && auto.py sync
+```
+
+And to delete symlinks run:
+
+```sh
+chmod +x auto.py && auto.py sync -d
+```
