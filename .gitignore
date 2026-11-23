@@ -1,12 +1,11 @@
-tmux/.config/tmux/plugins/*
-!tmux/.config/tmux/plugins/tpm
-!tmux/.config/tmux/plugins/tpm/*
+**/tmux/plugins/*
+!**/tmux/plugins/tpm
+!**/tmux/plugins/tpm/*
 
-bash/.local/share/fonts/.uuid
+**/fonts/.uuid
+.fuse_hidden*
 
-ghostty/.local/share/fonts/.uuid
+**/godot/recent_dirs
+**/godot/favorite_dirs
 
-godot/.config/godot/recent_dirs
-godot/.config/godot/favorite_dirs
-
-**__pycache__
+__pycache__

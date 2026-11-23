@@ -9,8 +9,9 @@ sync stow_option="":
     mkdir -p ~/.config/tmux/plugins/
     mkdir -p ~/.config/godot/
     mkdir -p ~/.local/share/fonts/
-    
-    stow --target=${HOME} --verbose=1 {{stow_option}} $(python -m _repo_scripts.get_public_modules)
+
+    in_use_modules=$(python -m scripts.get_in_use_modules) && \
+    (cd ./modules/in_use/ && stow --target=${HOME} --verbose=2 {{stow_option}} $in_use_modules)
 
 generate_readme:
-    echo "$(python -m _repo_scripts.generate_readme)" > README.md
+    echo "$(python -m scripts.generate_readme)" > README.md
