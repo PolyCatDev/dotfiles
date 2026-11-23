@@ -11,7 +11,8 @@ sync stow_option="":
     mkdir -p ~/.local/share/fonts/
 
     in_use_modules=$(python -m scripts.get_in_use_modules) && \
-    (cd ./modules/in_use/ && stow --target=${HOME} --verbose=2 {{stow_option}} $in_use_modules)
+    in_use_modules_root_dir=$(python -m scripts.get_in_use_modules --root-directory) && \
+    (cd $in_use_modules_root_dir && stow --target=$HOME --verbose=2 {{stow_option}} $in_use_modules)
 
 generate_readme:
     echo "$(python -m scripts.generate_readme)" > README.md
