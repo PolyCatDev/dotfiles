@@ -1,12 +1,7 @@
 Welcome to my dotfiles repo. This is where I store config
     files for the tools I use.
 
-## Configs in this repo
-
-In use configs get automatically automatically symlinked
-to their respective directories using
-[GNU Stow](https://www.gnu.org/software/stow/) and
-configs not in use are simply ignored.
+## In this repo
 
 ### Configs in use
 
@@ -29,6 +24,11 @@ configs not in use are simply ignored.
 - Wlxoverlay
 
 ## Syncing configs
+
+In use configs get automatically automatically symlinked
+to their respective directories using
+[GNU Stow](https://www.gnu.org/software/stow/) and
+configs not in use are simply ignored.
 
 To link configs run:
 

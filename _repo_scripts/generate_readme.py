@@ -8,12 +8,7 @@ from .get_public_modules import append_directory_paths
 def generate_module_index(stow_modules: dict[str, list[Path]]) -> str:
 
     header = dedent("""\
-        ## Configs in this repo
-        
-        In use configs get automatically automatically symlinked
-        to their respective directories using
-        [GNU Stow](https://www.gnu.org/software/stow/) and
-        configs not in use are simply ignored.
+        ## In this repo
         """)
     
     index = ""
@@ -34,6 +29,11 @@ if __name__ == "__main__":
 
     readme_footer = dedent("""\
         ## Syncing configs
+
+        In use configs get automatically automatically symlinked
+        to their respective directories using
+        [GNU Stow](https://www.gnu.org/software/stow/) and
+        configs not in use are simply ignored.
 
         To link configs run:
 
