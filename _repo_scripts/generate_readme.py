@@ -28,8 +28,8 @@ def generate_module_index(stow_modules: dict[str, list[Path]]) -> str:
 if __name__ == "__main__":
 
     readme_header = dedent("""\
-        Welcome to my dotfiles repo. This is where I store the
-        configs of the tools I use.
+        Welcome to my dotfiles repo. This is where I store config
+            files for the tools I use.
         """)
 
     readme_footer = dedent("""\

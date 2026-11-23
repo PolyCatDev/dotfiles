@@ -1,5 +1,5 @@
-Welcome to my dotfiles repo. This is where I store the
-configs of the tools I use.
+Welcome to my dotfiles repo. This is where I store config
+    files for the tools I use.
 
 ## Configs in this repo
 
