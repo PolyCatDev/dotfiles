@@ -1,5 +1,5 @@
 Welcome to my dotfiles repo. This is where I store config
-    files for the tools I use.
+files for the tools I use.
 
 ## In this repo
 
@@ -16,7 +16,6 @@ Welcome to my dotfiles repo. This is where I store config
 
 ### Configs not in use
 
-- Alacritty
 - Codium
 - Direwolf
 - Otd
