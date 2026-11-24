@@ -25,7 +25,7 @@ return {
 			{ "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = lsp_servers } },
 		},
 		init = function()
-            -- Godot specific setup
+			-- Godot specific setup
 			local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
 			if gdproject then
 				io.close(gdproject)
@@ -36,14 +36,14 @@ return {
 		end,
 		config = function()
 			-- # Keymap
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
-            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-            vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
 
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
-            vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, { desc = "Signature help" })
-            vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, { desc = "Line diagnostics" })
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+			vim.keymap.set("n", "<Leader>]", vim.lsp.buf.signature_help, { desc = "Signature help" })
+			vim.keymap.set("n", "<Leader>[", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 		end,
 	},
 
@@ -69,7 +69,17 @@ return {
 			vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, {})
 		end,
 	},
-
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				-- See the configuration section for more details
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+			},
+		},
+	},
 	{ -- LSP completion engine
 		"hrsh7th/nvim-cmp",
 		dependencies = {
