@@ -25,7 +25,6 @@ if __name__ == "__main__":
                 pass
 
     except IndexError:
-        pass
         append_directory_paths(stow_modules["in use"], in_use_modules_path, excluded_dirs)
    
         for path in stow_modules["in use"]:
