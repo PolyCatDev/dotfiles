@@ -10,7 +10,7 @@ Oh hi there. You found my NeoVim config
 - **Git Inegration:** [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - **Centered Code Buffers:** Using [no-neck-pain](https://github.com/shortcuts/no-neck-pain.nvim)
 
->[!Warning]
+>[!Important]
 >1. `ripgrep` package is required for live grep in Telescope Search to work
 >2. `binutils` package is required for Treesitter languages to load
 >3. `npm`, `go`, `gcc` and `python` packages required for all LSPs to properly install
