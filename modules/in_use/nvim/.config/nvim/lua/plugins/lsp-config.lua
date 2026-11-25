@@ -7,6 +7,7 @@ local lsp_servers = {
 	"astro",
 	"tailwindcss",
 	"clangd",
+	"roslyn_ls",
 }
 
 local tools = {
